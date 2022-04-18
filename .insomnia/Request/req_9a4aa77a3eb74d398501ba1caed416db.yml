@@ -1,0 +1,25 @@
+_id: req_9a4aa77a3eb74d398501ba1caed416db
+type: Request
+parentId: fld_d03dc9ff8db841a5888b591cbe050dcd
+modified: 1650310152244
+created: 1649939584941
+url: "{{MODULE_URL}}"
+name: ALL
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_8ecf7247bb784ce6bed979fd02fe7061
+    name: Authorization
+    value: Bearer {{TOKEN}}
+    description: ""
+authentication: {}
+metaSortKey: -1649939584941
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

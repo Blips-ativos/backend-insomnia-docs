@@ -1,0 +1,25 @@
+_id: req_21f57ab206a64bc28be2555589ad16d6
+type: Request
+parentId: fld_d03dc9ff8db841a5888b591cbe050dcd
+modified: 1650310204803
+created: 1649939227310
+url: "{{MODULE_URL}}/62583082ef60860a2e67dad4"
+name: RETRIEVE
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_817862333d0c42518eb697031e7b6f8c
+    name: Authorization
+    value: Bearer {{TOKEN}}
+    description: ""
+authentication: {}
+metaSortKey: -1649939227310
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

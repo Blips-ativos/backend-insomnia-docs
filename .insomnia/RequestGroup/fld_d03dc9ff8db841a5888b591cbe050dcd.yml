@@ -1,0 +1,13 @@
+_id: fld_d03dc9ff8db841a5888b591cbe050dcd
+type: RequestGroup
+parentId: fld_4aad47cdefb9412184566f09301006fd
+modified: 1650310044513
+created: 1649939204341
+name: modelos
+description: ""
+environment:
+  MODULE_URL: "{{BASE_URL}}/assets/models"
+environmentPropertyOrder:
+  "&":
+    - MODULE_URL
+metaSortKey: -1649939204341

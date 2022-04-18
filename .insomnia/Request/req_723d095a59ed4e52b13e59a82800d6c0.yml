@@ -1,0 +1,30 @@
+_id: req_723d095a59ed4e52b13e59a82800d6c0
+type: Request
+parentId: fld_598d4c7369104c1d92ca8bda1b88b957
+modified: 1650309409685
+created: 1649548406886
+url: "{{MODULE_URL}}/login/624b373210c6fc7fcb4b7e0b"
+name: login
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"email": "b0ce3e43f0@catdogmail.live",
+    	"password": "asd123"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_6fa7846e91f64073ad8d83581e397e1d
+authentication: {}
+metaSortKey: -1649548406886
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

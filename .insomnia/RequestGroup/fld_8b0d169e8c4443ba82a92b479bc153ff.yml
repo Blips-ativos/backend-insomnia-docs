@@ -1,0 +1,13 @@
+_id: fld_8b0d169e8c4443ba82a92b479bc153ff
+type: RequestGroup
+parentId: fld_4aad47cdefb9412184566f09301006fd
+modified: 1649943031973
+created: 1649942810728
+name: segmentos
+description: ""
+environment:
+  MODULE_URL: "{{BASE_URL}}/adm/segments"
+environmentPropertyOrder:
+  "&":
+    - MODULE_URL
+metaSortKey: -1649942810728
