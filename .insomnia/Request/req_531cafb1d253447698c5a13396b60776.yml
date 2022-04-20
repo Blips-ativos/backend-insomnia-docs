@@ -1,0 +1,35 @@
+_id: req_531cafb1d253447698c5a13396b60776
+type: Request
+parentId: fld_d03dc9ff8db841a5888b591cbe050dcd
+modified: 1650481108503
+created: 1650479760122
+url: "{{MODULE_URL}}/6260527fe61a6d1bf1aa57f5/business-rules"
+name: business rules
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"description": "TESTE",
+    	"tipo": "LOCACAO",
+    	"phases": []
+    }
+parameters: []
+headers:
+  - id: pair_d85151757aa24c188f3c9a21f7b06562
+    name: Authorization
+    value: Bearer {{TOKEN}}
+    description: ""
+  - name: Content-Type
+    value: application/json
+    id: pair_6b12b3061e7e4ca9b05442e58efac2d4
+authentication: {}
+metaSortKey: -1650479760122
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
