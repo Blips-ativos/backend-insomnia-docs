@@ -1,0 +1,13 @@
+_id: fld_918bf6ecea11437ea25a5d13271fb89b
+type: RequestGroup
+parentId: fld_4aad47cdefb9412184566f09301006fd
+modified: 1651515368823
+created: 1651515191523
+name: contract
+description: ""
+environment:
+  MODULE_URL: "{{BASE_URL}}/contracts"
+environmentPropertyOrder:
+  "&":
+    - MODULE_URL
+metaSortKey: -1651515191523

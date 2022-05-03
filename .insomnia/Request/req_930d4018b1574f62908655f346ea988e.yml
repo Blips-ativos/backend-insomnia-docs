@@ -1,0 +1,47 @@
+_id: req_930d4018b1574f62908655f346ea988e
+type: Request
+parentId: fld_918bf6ecea11437ea25a5d13271fb89b
+modified: 1651525465671
+created: 1651524903997
+url: "{{MODULE_URL}}/cnpj"
+name: CREATE
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"contract_number": "999",
+    	"type": "LOCACAO",
+    	"selected_models": [],
+    	"address": {},
+    	"business_rule": {},
+    	"technicians": {},
+    	"assets": [],
+    	"financial": {},
+    	"phase": "",
+    	"value": 2000.0,
+    	"company_users": [],
+    	"shipping_value": 999.0,
+    	"signal": 999.9,
+    	"installation": {},
+    	"guarantor": {}
+    }
+parameters: []
+headers:
+  - id: pair_b0cee00894a04d79b82d96bfaffe71bf
+    name: Authorization
+    value: Bearer {{TOKEN}}
+    description: ""
+  - name: Content-Type
+    value: application/json
+    id: pair_e52941ad0707484691a5b8dde0c72ebd
+authentication: {}
+metaSortKey: -1651524903997
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

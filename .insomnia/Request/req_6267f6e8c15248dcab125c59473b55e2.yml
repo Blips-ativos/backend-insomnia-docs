@@ -1,9 +1,9 @@
 _id: req_6267f6e8c15248dcab125c59473b55e2
 type: Request
 parentId: fld_d03dc9ff8db841a5888b591cbe050dcd
-modified: 1650481110803
+modified: 1651527007421
 created: 1650305344238
-url: "{{MODULE_URL}}/6260527fe61a6d1bf1aa57f5/business-rules/LOCACAO/commercial\
+url: "{{MODULE_URL}}/626bee529c386b72d1b1ff94/business-rules/LOCACAO/commercial\
   -definitions"
 name: commecial definitions
 description: ""
@@ -12,11 +12,11 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"description": "teste teste",
-    	"signal_value": 2000.000,
-    	"instalation_value": 2000.000,
-    	"number_of_installments": 12,
-    	"installment_value": 2000.000
+        "description": "Preço padrão",
+        "signal_value": 2000.000,
+        "instalation_value": 2000.000,
+        "number_of_installments": 36,
+        "installment_value": 2000.000
     }
 parameters: []
 headers:
