@@ -1,9 +1,9 @@
 _id: req_930d4018b1574f62908655f346ea988e
 type: Request
 parentId: fld_918bf6ecea11437ea25a5d13271fb89b
-modified: 1651601904359
+modified: 1651675247972
 created: 1651524903997
-url: "{{MODULE_URL}}/cnpj"
+url: "{{MODULE_URL}}/6271a8d6884dfb4d7b3d674a"
 name: CREATE
 description: ""
 method: POST
@@ -11,19 +11,82 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"contract_number": "999",
+    	"contract_number": "",
     	"type": "LOCACAO",
-    	"selected_models": [],
-    	"address": {},
-    	"business_rule": {},
+    	"address": {
+    		"zipCode": "69053480",
+    		"stAve": "RUA, MAXIMO DOS SANTOS",
+    		"neighborhood": "NOSSA SENHORA DAS GRACAS",
+    		"state": "AM",
+    		"city": "MANAUS",
+    		"number": null,
+    		"complement": null
+    	},
+    	"business_rule": {
+    		"description": "TESTE",
+    		"tipo": "LOCACAO",
+    		"checklist_phases": [],
+    		"selected_commercial_definition": {
+    			"createdUser": {
+    				"id": "624d95cb7096d924cebf765a",
+    				"name": "teste123"
+    			},
+    			"description": "Preço padrão",
+    			"disabled": false,
+    			"instalationValue": 2000.0,
+    			"installmentValue": 2000.0,
+    			"numberOfInstallments": 36,
+    			"signalValue": 2000.0,
+    			"uid": "62704e3ec7bdcabee5e8677e"
+    		},
+    		"commercial_definitions": [],
+    		"checklists": [
+    			{
+    				"name": "",
+    				"phase": "LOCACAO",
+    				"status": "",
+    				"questions": [
+    					{
+    						"uid": "62708c4eb166110eb78751f7",
+    						"label": "Quantos metros quadrados (m²) você imprime por mês?",
+    						"organizacao_ref": "blips-ativos-1649096498.4232771",
+    						"typeof": "TEXT",
+    						"upload_origin": [],
+    						"options": [
+    							{
+    								"value": "1",
+    								"label": "Até 100 (m²)."
+    							},
+    							{
+    								"value": "5",
+    								"label": "101 a 200 (m²)."
+    							},
+    							{
+    								"value": "6",
+    								"label": "Mais de 200 (m²)."
+    							}
+    						],
+    						"required": false,
+    						"mask": "NONE",
+    						"requirements": [],
+    						"terms": [],
+    						"sub_questions": []
+    					}
+    				]
+    			}
+    		]
+    	},
     	"technicians": {},
     	"assets": [],
     	"financial": {},
-    	"phase": "",
+    	"phase": {
+    		"name": "LOCACAO",
+    		"is_reproved": false,
+    		"linked_id_user": ""
+    	},
     	"value": 2000.0,
-    	"company_users": [],
     	"shipping_value": 999.0,
-    	"signal": 999.9,
+    	"signal": {},
     	"installation": {},
     	"guarantor": {}
     }
