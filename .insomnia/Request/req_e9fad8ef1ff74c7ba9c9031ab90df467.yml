@@ -1,7 +1,7 @@
 _id: req_e9fad8ef1ff74c7ba9c9031ab90df467
 type: Request
 parentId: fld_a869f44a68004d459f676ba8e7ec6747
-modified: 1651686436569
+modified: 1651686518721
 created: 1650480302792
 url: "{{ _.BASE_URL }}{{ _.base_url_model }}"
 name: CREATE
@@ -9,33 +9,65 @@ description: ""
 method: POST
 body:
   mimeType: application/json
-  text: >-
+  text: |-
     {
     	"label": "string (required)",
-       "type": "string (enum=OPTION|UPLOAD|AGREEMENT|TEXT  [default= TEXT])",
-       "uploadOrigin": ["lista[string (enum=CAMERA|GALLERY)] ([default=[]])"],
-    	"options": [{"value":"string", "label": "string", "description":"string"}],
-       "required": false, 
-       "mask": "string (enum=NONE  [default= NONE])",
-       "requirements": ["lista[string] ([default=[]])"],
-       "showSubquestionCondition": {"value":"string", "label": "string", "description":"string"},
-       "terms": ["lista[string] ([default=[]])"],
-       "subQuestions": [
-    		 		{
-             "uid" :"string (required)", 
-             "label": "string(required)", 
-             "type": "string (enum=OPTION|UPLOAD|AGREEMENT|TEXT  [default= TEXT])", 
-             "uploadOrigin": ["lista[string (enum=CAMERA|GALLERY)] ([default=[]])"], 
-             "options": [{"value":"string", "label": "string", "description":"string"}],
-             "required": false,
-             "mask": "string (enum=NONE  [default= NONE])",
-             "requirements": ["lista[string] ([default=[]])"],
-             "showSubquestionCondition": {"value":"string", "label": "string", "description":"string"},
-             "terms": ["lista[string] ([default=[]])"],
-             "subQuestions": {}
+    	"type": "string (enum=OPTION|UPLOAD|AGREEMENT|TEXT  [default= TEXT])",
+    	"uploadOrigin": [
+    		"lista[string (enum=CAMERA|GALLERY)] ([default=[]])"
+    	],
+    	"options": [
+    		{
+    			"value": "string",
+    			"label": "string",
+    			"description": "string"
+    		}
+    	],
+    	"required": false,
+    	"mask": "string (enum=NONE  [default= NONE])",
+    	"requirements": [
+    		"lista[string] ([default=[]])"
+    	],
+    	"showSubquestionCondition": {
+    		"value": "string",
+    		"label": "string",
+    		"description": "string"
+    	},
+    	"terms": [
+    		"lista[string] ([default=[]])"
+    	],
+    	"subQuestions": [
+    		{
+    			"uid": "string (required)",
+    			"label": "string(required)",
+    			"type": "string (enum=OPTION|UPLOAD|AGREEMENT|TEXT  [default= TEXT])",
+    			"uploadOrigin": [
+    				"lista[string (enum=CAMERA|GALLERY)] ([default=[]])"
+    			],
+    			"options": [
+    				{
+    					"value": "string",
+    					"label": "string",
+    					"description": "string"
     				}
-    	 ],
-       "observation": "string"
+    			],
+    			"required": false,
+    			"mask": "string (enum=NONE  [default= NONE])",
+    			"requirements": [
+    				"lista[string] ([default=[]])"
+    			],
+    			"showSubquestionCondition": {
+    				"value": "string",
+    				"label": "string",
+    				"description": "string"
+    			},
+    			"terms": [
+    				"lista[string] ([default=[]])"
+    			],
+    			"subQuestions": {}
+    		}
+    	],
+    	"observation": "string"
     }
 parameters: []
 headers:

@@ -1,7 +1,7 @@
 _id: req_930d4018b1574f62908655f346ea988e
 type: Request
 parentId: fld_918bf6ecea11437ea25a5d13271fb89b
-modified: 1651675247972
+modified: 1651686814490
 created: 1651524903997
 url: "{{MODULE_URL}}/6271a8d6884dfb4d7b3d674a"
 name: CREATE
@@ -12,16 +12,7 @@ body:
   text: |-
     {
     	"contract_number": "",
-    	"type": "LOCACAO",
-    	"address": {
-    		"zipCode": "69053480",
-    		"stAve": "RUA, MAXIMO DOS SANTOS",
-    		"neighborhood": "NOSSA SENHORA DAS GRACAS",
-    		"state": "AM",
-    		"city": "MANAUS",
-    		"number": null,
-    		"complement": null
-    	},
+    	"typeof": "LOCACAO",
     	"business_rule": {
     		"description": "TESTE",
     		"tipo": "LOCACAO",
@@ -70,7 +61,8 @@ body:
     						"mask": "NONE",
     						"requirements": [],
     						"terms": [],
-    						"sub_questions": []
+    						"sub_questions": [],
+    						"answer": ""
     					}
     				]
     			}
