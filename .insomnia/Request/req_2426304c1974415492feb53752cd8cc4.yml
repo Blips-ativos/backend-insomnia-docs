@@ -1,21 +1,17 @@
-_id: req_9a4aa77a3eb74d398501ba1caed416db
+_id: req_2426304c1974415492feb53752cd8cc4
 type: Request
 parentId: fld_d03dc9ff8db841a5888b591cbe050dcd
-modified: 1651680547944
-created: 1649939584941
-url: "{{MODULE_URL}}"
-name: ALL
+modified: 1650994598805
+created: 1650994232113
+url: "{{MODULE_URL}}/resume/624b373210c6fc7fcb4b7e0b"
+name: ALL NONAUTH
 description: ""
 method: GET
 body: {}
 parameters: []
-headers:
-  - id: pair_8ecf7247bb784ce6bed979fd02fe7061
-    name: Authorization
-    value: Bearer {{TOKEN}}
-    description: ""
+headers: []
 authentication: {}
-metaSortKey: -1649939584941
+metaSortKey: -1650994232113
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

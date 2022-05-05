@@ -1,21 +1,21 @@
-_id: req_9a4aa77a3eb74d398501ba1caed416db
+_id: req_00d955f58c864c42ac64b6fb7e6e04da
 type: Request
-parentId: fld_d03dc9ff8db841a5888b591cbe050dcd
-modified: 1651680547944
-created: 1649939584941
-url: "{{MODULE_URL}}"
+parentId: fld_918bf6ecea11437ea25a5d13271fb89b
+modified: 1651605662981
+created: 1651515200518
+url: "{{MODULE_URL}}/<cnpj do cliente>"
 name: ALL
 description: ""
 method: GET
 body: {}
 parameters: []
 headers:
-  - id: pair_8ecf7247bb784ce6bed979fd02fe7061
+  - id: pair_8f754afb42ec4d69952b058bdbee351c
     name: Authorization
     value: Bearer {{TOKEN}}
     description: ""
 authentication: {}
-metaSortKey: -1649939584941
+metaSortKey: -1651524904047
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

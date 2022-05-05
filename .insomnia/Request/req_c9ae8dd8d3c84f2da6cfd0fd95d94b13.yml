@@ -1,7 +1,7 @@
 _id: req_c9ae8dd8d3c84f2da6cfd0fd95d94b13
 type: Request
 parentId: fld_d03dc9ff8db841a5888b591cbe050dcd
-modified: 1650479737839
+modified: 1650994372315
 created: 1649939215934
 url: "{{MODULE_URL}}"
 name: ADD
@@ -12,9 +12,9 @@ body:
   text: |-
     {
     	"segment": "6258261a133743e4deadee8d",
-    	"manufacturer": "TESTE 2",
+    	"manufacturer": "TESTE",
     	"image": "",
-    	"name": "teste 2"
+    	"name": "teste"
     }
 parameters: []
 headers:
