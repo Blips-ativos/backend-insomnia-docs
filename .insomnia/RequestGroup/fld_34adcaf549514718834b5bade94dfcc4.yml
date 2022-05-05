@@ -1,0 +1,13 @@
+_id: fld_34adcaf549514718834b5bade94dfcc4
+type: RequestGroup
+parentId: fld_4aad47cdefb9412184566f09301006fd
+modified: 1651698111630
+created: 1651697926415
+name: entrepreneur
+description: ""
+environment:
+  base_url_model: /entrepreneur
+environmentPropertyOrder:
+  "&":
+    - base_url_model
+metaSortKey: -1649939204291

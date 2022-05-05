@@ -1,0 +1,13 @@
+_id: fld_771d9917f8b745b8a4476a42ab38b787
+type: RequestGroup
+parentId: fld_34adcaf549514718834b5bade94dfcc4
+modified: 1651698216221
+created: 1651687090908
+name: Cliente
+description: ""
+environment:
+  url_group: /client
+environmentPropertyOrder:
+  "&":
+    - url_group
+metaSortKey: -1651687090908
