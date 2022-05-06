@@ -1,7 +1,7 @@
 _id: req_a96bd8535bf94814a784e548ed5ebb2e
 type: Request
 parentId: fld_918bf6ecea11437ea25a5d13271fb89b
-modified: 1651660444691
+modified: 1651862224634
 created: 1651607754320
 url: "{{MODULE_URL}}/<negociation_uid>/remove-company-user/<user_uid>"
 name: remove user

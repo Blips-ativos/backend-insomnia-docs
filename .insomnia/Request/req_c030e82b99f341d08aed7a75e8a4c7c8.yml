@@ -1,17 +1,17 @@
-_id: req_930d4018b1574f62908655f346ea988e
+_id: req_c030e82b99f341d08aed7a75e8a4c7c8
 type: Request
 parentId: fld_918bf6ecea11437ea25a5d13271fb89b
-modified: 1651862271413
-created: 1651524903997
-url: "{{MODULE_URL}}/6271a8d6884dfb4d7b3d674a"
-name: CREATE
+modified: 1651863203219
+created: 1651862117099
+url: "{{MODULE_URL}}/627290b89a947a45bc958b8e"
+name: UPDATE
 description: ""
-method: POST
+method: PUT
 body:
   mimeType: application/json
   text: |-
     {
-    	"contract_number": "",
+    	"contract_number": "3",
     	"typeof": "LOCACAO",
     	"business_rule": {
     		"description": "TESTE",
@@ -84,15 +84,15 @@ body:
     }
 parameters: []
 headers:
-  - id: pair_b0cee00894a04d79b82d96bfaffe71bf
+  - name: Content-Type
+    value: application/json
+    id: pair_7a10ae0f9f6945bf8bbcc81f063b1285
+  - id: pair_cf6d797d0f6f4bbf844c27c91304cb91
     name: Authorization
     value: Bearer {{TOKEN}}
     description: ""
-  - name: Content-Type
-    value: application/json
-    id: pair_e52941ad0707484691a5b8dde0c72ebd
 authentication: {}
-metaSortKey: -1651524903997
+metaSortKey: -1651862117099
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
