@@ -1,13 +1,15 @@
 _id: fld_918bf6ecea11437ea25a5d13271fb89b
 type: RequestGroup
 parentId: fld_4aad47cdefb9412184566f09301006fd
-modified: 1651601900435
+modified: 1652102796165
 created: 1651515191523
-name: contract
+name: negociation
 description: ""
 environment:
   MODULE_URL: "{{BASE_URL}}/negociation"
+  CLIENT_DOCUMENT: "53547360000174"
 environmentPropertyOrder:
   "&":
     - MODULE_URL
+    - CLIENT_DOCUMENT
 metaSortKey: -1651515191523
