@@ -1,7 +1,7 @@
 _id: req_930d4018b1574f62908655f346ea988e
 type: Request
 parentId: fld_918bf6ecea11437ea25a5d13271fb89b
-modified: 1652101487467
+modified: 1652207238568
 created: 1651524903997
 url: "{{MODULE_URL}}/6271a8d6884dfb4d7b3d674a"
 name: CREATE
@@ -13,6 +13,12 @@ body:
     {
     	"contract_number": "",
     	"typeof": "LOCACAO",
+    	"model_selected": {
+    		"uid": "",
+    		"name": "",
+    		"segment": "",
+    		"quantity": 1
+    	},
     	"business_rule": {
     		"description": "TESTE",
     		"tipo": "LOCACAO",
@@ -69,7 +75,28 @@ body:
     		]
     	},
     	"technicians": {},
-    	"assets": [],
+    	"assets": [
+    		{
+    			"linked_assets": [
+    				{
+    					"uid": "",
+    					"name": "",
+    					"serie_number": "",
+    					"start_date": "",
+    					"end_date": ""
+    				}
+    			],
+    			"assets_historical": [
+    				{
+    					"uid": "",
+    					"name": "",
+    					"serie_number": "",
+    					"start_date": "",
+    					"end_date": ""
+    				}
+    			]
+    		}
+    	],
     	"financial": {},
     	"phase": {
     		"name": "LOCACAO",
