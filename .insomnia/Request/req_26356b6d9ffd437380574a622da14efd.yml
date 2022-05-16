@@ -1,18 +1,18 @@
-_id: req_6267f6e8c15248dcab125c59473b55e2
+_id: req_26356b6d9ffd437380574a622da14efd
 type: Request
 parentId: fld_d03dc9ff8db841a5888b591cbe050dcd
-modified: 1652704802360
-created: 1650305344238
+modified: 1652704958700
+created: 1652703613875
 url: "{{MODULE_URL}}/626bee529c386b72d1b1ff94/business-rules/LOCACAO/commercial\
-  -definitions"
+  -definitions/62704e3ec7bdcabee5e8677e"
 name: commecial definitions
 description: ""
-method: POST
+method: PUT
 body:
   mimeType: application/json
   text: |-
     {
-        "description": "Preço padrão",
+        "description": "Preço padrãoooo",
         "signal_value": 2000.000,
         "instalation_value": 2000.000,
         "number_of_installments": 36,
@@ -32,7 +32,7 @@ headers:
     value: application/json
     id: pair_4741e843b9574541a851f501e8a94e32
 authentication: {}
-metaSortKey: -1650305344238
+metaSortKey: -1650305337700.5
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
