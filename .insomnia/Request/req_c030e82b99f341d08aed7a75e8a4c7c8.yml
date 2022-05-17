@@ -1,7 +1,7 @@
 _id: req_c030e82b99f341d08aed7a75e8a4c7c8
 type: Request
 parentId: fld_918bf6ecea11437ea25a5d13271fb89b
-modified: 1652796023555
+modified: 1652802794972
 created: 1651862117099
 url: "{{MODULE_URL}}/627290b89a947a45bc958b8e"
 name: UPDATE
@@ -12,10 +12,9 @@ body:
   text: |-
     {
     	"contract_number": "3",
-    	"typeof": "LOCACAO",
     	"business_rule": {
     		"description": "TESTE",
-    		"tipo": "LOCACAO",
+    		"type": "LOCACAO",
     		"checklist_phases": [],
     		"selected_commercial_definition": {
     			"createdUser": {
