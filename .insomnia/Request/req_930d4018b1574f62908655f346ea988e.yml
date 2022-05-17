@@ -1,7 +1,7 @@
 _id: req_930d4018b1574f62908655f346ea988e
 type: Request
 parentId: fld_918bf6ecea11437ea25a5d13271fb89b
-modified: 1652724586340
+modified: 1652796092007
 created: 1651524903997
 url: "{{MODULE_URL}}/6271a8d6884dfb4d7b3d674a"
 name: CREATE
@@ -14,7 +14,7 @@ body:
     	"contract_number": "",
     	"typeof": "LOCACAO",
     	"model_selected": {
-    		"uid": "",
+    		"id": "",
     		"name": "",
     		"segment": "",
     		"quantity": 1
@@ -34,7 +34,7 @@ body:
     			"installmentValue": 2000.0,
     			"numberOfInstallments": 36,
     			"signalValue": 2000.0,
-    			"uid": "62704e3ec7bdcabee5e8677e"
+    			"id": "62704e3ec7bdcabee5e8677e"
     		},
     		"commercial_definitions": [],
     		"checklists": [
@@ -79,7 +79,7 @@ body:
     		{
     			"linked_assets": [
     				{
-    					"uid": "",
+    					"id": "",
     					"name": "",
     					"serie_number": "",
     					"start_date": "",
@@ -88,7 +88,7 @@ body:
     			],
     			"assets_historical": [
     				{
-    					"uid": "",
+    					"id": "",
     					"name": "",
     					"serie_number": "",
     					"start_date": "",

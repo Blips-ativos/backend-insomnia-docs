@@ -1,7 +1,7 @@
 _id: req_a07fc4a55eef459a86581e4418864e41
 type: Request
 parentId: fld_771d9917f8b745b8a4476a42ab38b787
-modified: 1652728529204
+modified: 1652796143431
 created: 1651698347652
 url: "{{ _.BASE_URL }}{{ _.base_url_model }}{{ _.url_group }}/self"
 name: create_client_with_entrepreneur_self
@@ -24,7 +24,7 @@ body:
     			"complement" : "string",
     			"proofOfResidence" : "string"
     		},
-        "telephone" : "string(required)",
+        "cellphone" : "string(required)",
         "motherName" : "string",
         "document" : "string(required)",
         "documentIssuanceDate" : "string",
@@ -47,7 +47,7 @@ body:
     			"complement" : "string",
     			"proofOfResidence" : "string"
     		},
-        "telephone" : "string(required)",
+        "cellphone" : "string(required)",
         "openingDate" :"string",
     		"status_sintegra" : "string(default='')"
     	},

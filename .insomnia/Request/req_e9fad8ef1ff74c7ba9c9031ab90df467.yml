@@ -1,7 +1,7 @@
 _id: req_e9fad8ef1ff74c7ba9c9031ab90df467
 type: Request
 parentId: fld_a869f44a68004d459f676ba8e7ec6747
-modified: 1652101603233
+modified: 1652796103267
 created: 1650480302792
 url: "{{ _.BASE_URL }}{{ _.base_url_model }}"
 name: CREATE
@@ -38,7 +38,7 @@ body:
     	],
     	"subQuestions": [
     		{
-    			"uid": "string (required)",
+    			"id": "string (required)",
     			"label": "string(required)",
     			"type": "string (enum=OPTION|UPLOAD|AGREEMENT|TEXT  [default= TEXT])",
     			"uploadOrigin": [

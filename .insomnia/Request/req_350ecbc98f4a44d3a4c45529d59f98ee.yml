@@ -1,7 +1,7 @@
 _id: req_350ecbc98f4a44d3a4c45529d59f98ee
 type: Request
 parentId: fld_771d9917f8b745b8a4476a42ab38b787
-modified: 1652728590355
+modified: 1652796142621
 created: 1651701667108
 url: "{{ _.BASE_URL }}{{ _.base_url_model }}{{ _.url_group }}/by-organization"
 name: get_cliente_by_organizacao
