@@ -1,7 +1,7 @@
 _id: req_350ecbc98f4a44d3a4c45529d59f98ee
 type: Request
 parentId: fld_771d9917f8b745b8a4476a42ab38b787
-modified: 1651717156334
+modified: 1652728590355
 created: 1651701667108
 url: "{{ _.BASE_URL }}{{ _.base_url_model }}{{ _.url_group }}/by-organization"
 name: get_cliente_by_organizacao
@@ -33,7 +33,11 @@ parameters:
     name: pageSize
     value: "100"
     description: ""
-headers: []
+headers:
+  - id: pair_823ae65acf9d476698d72ae8f09e8d5f
+    name: Authorization
+    value: Bearer {{TOKEN}}
+    description: ""
 authentication: {}
 metaSortKey: -1651701667108
 isPrivate: false

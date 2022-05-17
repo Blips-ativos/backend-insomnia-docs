@@ -1,15 +1,20 @@
 _id: req_5807972725954feeba819aad92d8067e
 type: Request
 parentId: fld_771d9917f8b745b8a4476a42ab38b787
-modified: 1651717199818
+modified: 1652728702214
 created: 1651717165446
-url: "{{ _.BASE_URL }}{{ _.base_url_model }}{{ _.url_group }}/<client_id>"
+url: "{{ _.BASE_URL }}{{ _.base_url_model }}{{ _.url_group
+  }}/6271a8d6884dfb4d7b3d674a"
 name: get_cliente_by_id
 description: ""
 method: GET
 body: {}
 parameters: []
-headers: []
+headers:
+  - id: pair_9b5e5b764d0e45a4b73e0e82b1f0b68c
+    name: Authorization
+    value: Bearer {{TOKEN}}
+    description: ""
 authentication: {}
 metaSortKey: -1651717165446
 isPrivate: false

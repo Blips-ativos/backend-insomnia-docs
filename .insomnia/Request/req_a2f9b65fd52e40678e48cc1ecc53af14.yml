@@ -1,7 +1,7 @@
 _id: req_a2f9b65fd52e40678e48cc1ecc53af14
 type: Request
 parentId: fld_771d9917f8b745b8a4476a42ab38b787
-modified: 1651716648049
+modified: 1652728679681
 created: 1651702201948
 url: "{{ _.BASE_URL }}{{ _.base_url_model }}{{ _.url_group }}/by-entrepreneur"
 name: get_cliente_by_entrepreneur
@@ -33,7 +33,11 @@ parameters:
     name: pageSize
     value: "100"
     description: ""
-headers: []
+headers:
+  - id: pair_426300174289454a92719360e8108807
+    name: Authorization
+    value: Bearer {{TOKEN}}
+    description: ""
 authentication: {}
 metaSortKey: -1651700007380
 isPrivate: false
