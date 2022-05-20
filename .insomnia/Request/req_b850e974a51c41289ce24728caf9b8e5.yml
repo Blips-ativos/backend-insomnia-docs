@@ -1,0 +1,36 @@
+_id: req_b850e974a51c41289ce24728caf9b8e5
+type: Request
+parentId: fld_771d9917f8b745b8a4476a42ab38b787
+modified: 1653048790945
+created: 1653048676077
+url: "{{ _.BASE_URL }}{{ _.base_url_model }}{{ _.url_group
+  }}/6271a8d6884dfb4d7b3d674a/historical"
+name: add historical
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"type": "EDIT_BASIC_INFO",
+    	"description": "alteração de dados",
+    	"justification": ""
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_b6101a8f86fe45d79a374c04afb01965
+  - id: pair_00ac6d9c72434c12815532a511f1fbee
+    name: Authorization
+    value: Bearer {{TOKEN}}
+    description: ""
+authentication: {}
+metaSortKey: -1653048676078
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

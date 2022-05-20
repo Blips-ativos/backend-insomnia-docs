@@ -1,7 +1,7 @@
 _id: req_4678ae367da041ac8712f65cdc568273
 type: Request
 parentId: fld_37e58615e1104709a7c7753a83995285
-modified: 1652789865420
+modified: 1652874905607
 created: 1652728102403
 url: "{{BASE_URL}}/crm"
 name: crm
@@ -23,34 +23,34 @@ body:
     					"state": "AM",
     					"zip_code": "69053480"
     				},
-    				"company_name": "res",
-    				"document": "59315295000138",
-    				"name": "res",
-    				"email": "teste@mail.com",
+    				"company_name": "#teste",
+    				"document": "59315295000139",
+    				"name": "#teste#",
+    				"email": "teste2022@mail.com",
     				"responsible": [
     					{
-    						"document": "60453436030",
-    						"name": "res",
-    						"telephone": "93991522063"
+    						"document": "60453436031",
+    						"name": "res1",
+    						"cellphone": "93991522064"
     					}
     				],
     				"status_sintegra": "",
-    				"telephone": "93991522063",
+    				"cellphone": "93991522099",
     				"typeof": "ME"
     			},
     			"business_type": "ME",
-    			"company_name": "res",
+    			"company_name": "#teste",
     			"contacts": {},
     			"created_at": "2022-05-03T22:12:25.00Z",
     			"created_user": null,
-    			"document": "59315295000138",
+    			"document": "59315295000140",
     			"historical": [],
     			"id": "6271a8d6884dfb4d7b3d674a",
     			"organizacao_ref": "blips-ativos-1649096498.4232771",
     			"personal_data": {
-    				"document": "60453436030",
-    				"name": "res",
-    				"telephone": "93991522063"
+    				"document": "60453436031",
+    				"name": "junin",
+    				"telephone": "93991522064"
     			},
     			"segments": null,
     			"situation": "",
