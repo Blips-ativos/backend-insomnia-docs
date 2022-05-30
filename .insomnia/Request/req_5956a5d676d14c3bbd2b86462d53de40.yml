@@ -1,13 +1,12 @@
-_id: req_b850e974a51c41289ce24728caf9b8e5
+_id: req_5956a5d676d14c3bbd2b86462d53de40
 type: Request
-parentId: fld_771d9917f8b745b8a4476a42ab38b787
-modified: 1653937577629
-created: 1653048676077
-url: "{{ _.BASE_URL }}{{ _.base_url_model }}{{ _.url_group
-  }}/6271a8d6884dfb4d7b3d674a/historical"
+parentId: fld_918bf6ecea11437ea25a5d13271fb89b
+modified: 1653937581002
+created: 1653937562023
+url: "{{MODULE_URL}}/6271a8d6884dfb4d7b3d674a/historical"
 name: add historical
 description: ""
-method: POST
+method: PATCH
 body:
   mimeType: application/json
   text: |-
@@ -20,13 +19,13 @@ parameters: []
 headers:
   - name: Content-Type
     value: application/json
-    id: pair_b6101a8f86fe45d79a374c04afb01965
-  - id: pair_00ac6d9c72434c12815532a511f1fbee
+    id: pair_7a10ae0f9f6945bf8bbcc81f063b1285
+  - id: pair_cf6d797d0f6f4bbf844c27c91304cb91
     name: Authorization
     value: Bearer {{TOKEN}}
     description: ""
 authentication: {}
-metaSortKey: -1653048676078
+metaSortKey: -1651735284402.625
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
