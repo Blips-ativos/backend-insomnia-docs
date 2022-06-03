@@ -1,0 +1,38 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3c8589cb3
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3ee1acfa5
+modified: 1654263033180
+created: 1654259262510
+url: "{{ base_url }}/v2/user/register/{{ orgId }}"
+name: registrar usuário
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "string",
+      "email": "string",
+      "password": "string",
+      "profiles": [
+        "string"
+      ],
+      "status": "string",
+      "typeof": "string",
+      "cellphone": "string",
+      "origin": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_541a732ae5cc4c509c1bfc40cfefe1bb
+authentication: {}
+metaSortKey: -1654259262510
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1654262299025
+modified: 1654268193014
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >-
@@ -17,11 +17,15 @@ contents: >-
     license:
       name: Apache 2.0
       url: http://www.apache.org/licenses/LICENSE-2.0.html
+
+    
   tags:
     - name: Authentication
       description: Endpoints relacionados à autenticação
     - name: Questions
       description: Endpoints relacionados à perguntas de checklist
+    - name: Negotiation
+      description: Endpoints relacionados à negociações
     - name: pet
       description: Everything about your Pets
       externalDocs:
@@ -112,6 +116,40 @@ contents: >-
              
           "400":
             description: Invalid input
+    /v2/negociation/{negotiationId}/document-analysis/{analysisId}:
+      post:
+        tags:
+          - Negotiation
+        summary: aprovar/reprovar analise
+        description: "aprovar/reprovar analise"
+        parameters:
+          - name: negotiationId
+            in: path
+            description: ID da negociação
+            required: true
+            schema:
+              type: integer
+              format: int64
+          - name: analysisId
+            in: path
+            description: ID da análise
+            required: true
+            schema:
+              type: integer
+              format: int64
+        requestBody:
+          $ref: "#/components/requestBodies/AproveReproveAnalysis"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Negotiation"
+             
+          "400":
+            description: Invalid input
+        
     /pet/findByStatus:
       get:
         tags:
@@ -555,6 +593,16 @@ contents: >-
           application/json:
             schema:
               $ref: "#/components/schemas/Question"
+      AproveReproveAnalysis:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AproveReproveAnalysis"
+      Negotiation:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Negotiation"
       UserArray:
         content:
           application/json:
@@ -575,6 +623,34 @@ contents: >-
         description: Pet object that needs to be added to the store
         required: true
     schemas:
+      Address:
+        type: object
+        required:
+          - state
+          - city
+          - zipCode
+          - stAve
+          - neighborhood
+        properties:
+          state:
+            type: string
+            minLength: 2
+            maxLength: 4
+          city:
+            type: string
+          number:
+            type: string
+          zipCode:
+            type: string
+          stAve:
+            type: string
+          neighborhood:
+            type: string
+          complement:
+            type: string
+          proofOfResidence:
+            type: string
+          
       ShowSubquestionCondition:
         type: object
         properties:
@@ -705,6 +781,120 @@ contents: >-
                 subQuestions:
                   type: object
           observation: 
+            type: string
+      AproveReproveAnalysis:
+        type: object
+        properties:
+          status:
+            type: string
+            enum:
+              - COMPLETE
+              - REPROVED
+          historicalItem:
+            type: object
+            properties:
+              description:
+                type: string
+              justification:
+                type: string
+      PersonalData:
+        type: object
+        required:
+          - name
+          - address
+          - cellphone
+          - document
+        properties:
+          name: 
+            type: string
+          birthDate:
+            type: string
+          address:
+            $ref: "#/components/schemas/Address"
+          cellphone:
+            type: string
+          motherName:
+            type: string
+          document:
+            type: string
+          documentIssuanceDate:
+            type: string
+          responsibleIssuingDocument:
+            type: string
+          documentType:
+            type: string
+            enum:
+              - CPF
+              - RG
+              - HABILITACAO
+          documentProof:
+            type: string
+      BusinessData:
+        type: object
+        required:
+          - name
+          - address
+          - cellphone
+          - document
+        properties:
+          name: 
+            type: string
+          companyName:
+            type: string
+          typeof:
+            type: string
+            enum:
+              - MEI
+              - ME
+            default: ME
+          address:
+            $ref: "#/components/schemas/Address"
+          cellphone:
+            type: string
+          openingDate:
+            type: string
+      Negotiation:
+        type: object
+        properties:
+          contract_number:
+            type: string
+          model_selected: 
+            type: array
+          contractor:
+            type: object
+          business_rule:
+            type: object
+          technicians:
+            type: array
+          assets: 
+            type: array
+          financial:
+            type: object
+          phase:
+            type: object
+          value:
+            type: integer
+          historical_status: 
+            type: array
+          company_users: 
+            type: array
+          shipping_value:
+            type: integer
+          signal:
+            type: object
+          document_analysis: 
+            type: array
+          installation:
+            type: object
+          guarantor:
+            type: object
+          contacts_verification:
+            type: object
+          organization_ref:
+            type: string
+          created_at:
+            type: string
+          updated_at:
             type: string
       Order:
         type: object

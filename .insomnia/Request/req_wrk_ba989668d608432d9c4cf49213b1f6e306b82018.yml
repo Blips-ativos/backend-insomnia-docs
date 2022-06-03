@@ -1,0 +1,78 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e306b82018
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e39a1fc173
+modified: 1654268175736
+created: 1654262299011
+url: "{{ base_url }}/v2/adm/questions"
+name: buscar perguntas de checklist
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "label": "string",
+      "typeof": "string",
+      "options": {
+        "value": "string",
+        "label": "string",
+        "description": "string"
+      },
+      "required": true,
+      "mask": "string",
+      "requirements": [
+        "string"
+      ],
+      "showSubquestionCondition": {
+        "value": "string",
+        "label": "string",
+        "description": "string"
+      },
+      "terms": [
+        "string"
+      ],
+      "subQuestions": [
+        {
+          "id": "string",
+          "label": "string",
+          "typeof": "TEXT",
+          "uploadOrigin": [
+            "string"
+          ],
+          "options": {
+            "value": "string",
+            "label": "string",
+            "description": "string"
+          },
+          "required": true,
+          "mask": "string",
+          "requirements": [
+            "string"
+          ],
+          "showSubquestionCondition": {
+            "value": "string",
+            "label": "string",
+            "description": "string"
+          },
+          "terms": [
+            "string"
+          ],
+          "subQuestions": {}
+        }
+      ],
+      "observation": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_ae129a5802b04ad3aa0ed7e4faef5b83
+authentication: {}
+metaSortKey: -1654262299011
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
