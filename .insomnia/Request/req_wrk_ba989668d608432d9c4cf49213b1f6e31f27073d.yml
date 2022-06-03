@@ -10,7 +10,10 @@ method: POST
 body: {}
 parameters: []
 headers: []
-authentication: {}
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
 metaSortKey: -1654262299012
 isPrivate: false
 settingStoreCookies: true

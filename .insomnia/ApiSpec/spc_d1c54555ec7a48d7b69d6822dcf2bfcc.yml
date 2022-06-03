@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1654268193014
+modified: 1654268496934
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >-
@@ -18,7 +18,6 @@ contents: >-
       name: Apache 2.0
       url: http://www.apache.org/licenses/LICENSE-2.0.html
 
-    
   tags:
     - name: Authentication
       description: Endpoints relacionados à autenticação
@@ -38,6 +37,8 @@ contents: >-
       externalDocs:
         description: Find out more about our store
         url: http://swagger.io
+
+        
   paths:
     /v2/user/login/{orgId}:
       post:
@@ -60,6 +61,8 @@ contents: >-
             description: Invalid input
     /v2/user/register/{orgId}:
       post:
+        security:
+          - bearerAuth: []
         tags:
           - Authentication
         summary: registrar usuário
@@ -79,6 +82,8 @@ contents: >-
             description: Invalid input
     /v2/user/refresh-token:
       post:
+        security:
+          - bearerAuth: []
         tags:
           - Authentication
         summary: refresh token
@@ -90,6 +95,8 @@ contents: >-
             description: Invalid input
     /v2/adm/questions:
       post:
+        security:
+          - bearerAuth: []
         tags:
           - Questions
         summary: criar pergunta de checklist
@@ -98,6 +105,8 @@ contents: >-
           "400":
             description: Invalid input
       get:
+        security:
+          - bearerAuth: []
         tags:
           - Questions
         summary: buscar perguntas de checklist
@@ -118,6 +127,8 @@ contents: >-
             description: Invalid input
     /v2/negociation/{negotiationId}/document-analysis/{analysisId}:
       post:
+        security:
+          - bearerAuth: []
         tags:
           - Negotiation
         summary: aprovar/reprovar analise
@@ -566,12 +577,19 @@ contents: >-
             description: Invalid username supplied
           "404":
             description: User not found
+
+            
   externalDocs:
     description: Find out more about Swagger
     url: http://swagger.io
   servers:
     - url: http://localhost:8080
   components:
+    securitySchemes:
+      bearerAuth:            # arbitrary name for the security scheme
+        type: http
+        scheme: bearer
+        bearerFormat: JWT
     requestBodies:
       Login:
         content:

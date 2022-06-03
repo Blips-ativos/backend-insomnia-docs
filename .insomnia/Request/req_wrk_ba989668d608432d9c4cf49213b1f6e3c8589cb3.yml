@@ -27,7 +27,10 @@ headers:
   - name: Content-Type
     value: application/json
     id: pair_541a732ae5cc4c509c1bfc40cfefe1bb
-authentication: {}
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
 metaSortKey: -1654259262510
 isPrivate: false
 settingStoreCookies: true
