@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1654257547737
+modified: 1654268870608
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >-
@@ -17,9 +17,14 @@ contents: >-
     license:
       name: Apache 2.0
       url: http://www.apache.org/licenses/LICENSE-2.0.html
+
   tags:
     - name: Authentication
       description: Endpoints relacionados à autenticação
+    - name: Questions
+      description: Endpoints relacionados à perguntas de checklist
+    - name: Negotiation
+      description: Endpoints relacionados à negociações
     - name: pet
       description: Everything about your Pets
       externalDocs:
@@ -32,6 +37,8 @@ contents: >-
       externalDocs:
         description: Find out more about our store
         url: http://swagger.io
+
+        
   paths:
     /v2/user/login/{orgId}:
       post:
@@ -52,35 +59,106 @@ contents: >-
         responses:
           "400":
             description: Invalid input
-  #     put:
-
-  #       tags:
-
-  #         - pet
-
-  #       summary: Update an existing pet
-
-  #       description: ""
-
-  #       operationId: updatePet
-
-  #       requestBody:
-
-  #         $ref: "#/components/requestBodies/Pet"
-
-  #       responses:
-
-  #         "400":
-
-  #           description: Invalid ID supplied
-
-  #         "404":
-
-  #           description: Pet not found
-
-  #         "405":
-
-  #           description: Validation exception
+    /v2/user/register/{orgId}:
+      post:
+        security:
+          - bearerAuth: []
+        tags:
+          - Authentication
+        summary: registrar usuário
+        description: "Registrar usuário"
+        parameters:
+          - name: orgId
+            in: path
+            description: ID da organização
+            required: true
+            schema:
+              type: integer
+              format: int64
+        requestBody:
+          $ref: "#/components/requestBodies/Register"
+        responses:
+          "400":
+            description: Invalid input
+    /v2/user/refresh-token:
+      post:
+        security:
+          - bearerAuth: []
+        tags:
+          - Authentication
+        summary: refresh token
+        description: "Fazer refresh de token"
+        requestBody:
+          $ref: "#/components/requestBodies/RefreshToken"
+        responses:
+          "400":
+            description: Invalid input
+    /v2/adm/questions:
+      post:
+        security:
+          - bearerAuth: []
+        tags:
+          - Questions
+        summary: criar pergunta de checklist
+        description: "criar pergunta de checklist"
+        responses:
+          "400":
+            description: Invalid input
+      get:
+        security:
+          - bearerAuth: []
+        tags:
+          - Questions
+        summary: buscar perguntas de checklist
+        description: "buscar perguntas de checklist"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/Question"
+             
+          "400":
+            description: Invalid input
+    /v2/negociation/{negotiationId}/document-analysis/{analysisId}:
+      post:
+        security:
+          - bearerAuth: []
+        tags:
+          - Negotiation
+        summary: aprovar/reprovar analise
+        description: "aprovar/reprovar analise"
+        parameters:
+          - name: negotiationId
+            in: path
+            description: ID da negociação
+            required: true
+            schema:
+              type: integer
+              format: int64
+          - name: analysisId
+            in: path
+            description: ID da análise
+            required: true
+            schema:
+              type: integer
+              format: int64
+        requestBody:
+          $ref: "#/components/requestBodies/AproveReproveAnalysis"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Negotiation"
+             
+          "400":
+            description: Invalid input
+        
     /pet/findByStatus:
       get:
         tags:
@@ -497,18 +575,50 @@ contents: >-
             description: Invalid username supplied
           "404":
             description: User not found
+
+            
   externalDocs:
     description: Find out more about Swagger
     url: http://swagger.io
   servers:
-    - url: https://petstore.swagger.io/v2
+    - url: http://localhost:8080
   components:
+    securitySchemes:
+      bearerAuth:            # arbitrary name for the security scheme
+        type: http
+        scheme: bearer
+        bearerFormat: JWT
     requestBodies:
       Login:
         content:
           application/json:
             schema:
               $ref: "#/components/schemas/Login"
+      Register:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Register"
+      RefreshToken:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RefreshToken"
+      Question:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Question"
+      AproveReproveAnalysis:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AproveReproveAnalysis"
+      Negotiation:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Negotiation"
       UserArray:
         content:
           application/json:
@@ -529,12 +639,278 @@ contents: >-
         description: Pet object that needs to be added to the store
         required: true
     schemas:
+      Address:
+        type: object
+        required:
+          - state
+          - city
+          - zipCode
+          - stAve
+          - neighborhood
+        properties:
+          state:
+            type: string
+            minLength: 2
+            maxLength: 4
+          city:
+            type: string
+          number:
+            type: string
+          zipCode:
+            type: string
+          stAve:
+            type: string
+          neighborhood:
+            type: string
+          complement:
+            type: string
+          proofOfResidence:
+            type: string
+          
+      ShowSubquestionCondition:
+        type: object
+        properties:
+          value:
+            type: string
+          label:
+            type: string
+          description:
+            type: string
       Login:
         type: object
         properties:
           email:
             type: string
           password:
+            type: string
+      Register:
+        type: object
+        properties:
+          name:
+            type: string
+          email:
+            type: string
+          password:
+            type: string
+          profiles:
+            type: array
+            items: 
+              type: string
+          status:
+            type: string
+            enum:
+              - INATIVO
+              - ATIVO
+              - EM_ANALISE
+          typeof:
+            type: string
+            enum:
+              - GESTOR
+              - EMPREENDEDOR
+              - TECNICO
+              - USUARIO_EMPRESA
+          cellphone:
+            type: string
+          origin:
+            type: string
+      RefreshToken:
+        type: object
+        properties:
+          refreshToken:
+            type: string
+      Question:
+        type: object
+        properties:
+          label:
+            type: string
+          typeof:
+            type: string
+            enum: 
+              - OPTION
+              - UPLOAD
+              - AGREEMENT
+              - TEXT
+          options:
+            $ref: "#/components/schemas/ShowSubquestionCondition"
+          required:
+            type: boolean
+          mask:
+            type: string
+          requirements:
+            type: array
+            items:
+              type: string
+          showSubquestionCondition:
+            $ref: "#/components/schemas/ShowSubquestionCondition"
+          terms:
+             type: array
+             items:
+               type: string
+          subQuestions:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: string
+                label:
+                  type: string
+                typeof:
+                  type: string
+                  default: TEXT
+                  enum:
+                    - OPTION
+                    - UPLOAD
+                    - AGREEMENT
+                    - TEXT
+                uploadOrigin:
+                  type: array
+                  items:
+                    type: string
+                    enum:
+                      - CAMERA
+                      - GALLERY
+                options:
+                  type: object
+                  properties:
+                    value: 
+                      type: string
+                    label:
+                      type: string
+                    description:
+                      type: string
+                required: 
+                  type: boolean
+                  default: false
+                mask:
+                  type: string
+                requirements:
+                  type: array
+                  items:
+                    type: string
+                showSubquestionCondition:
+                  $ref: "#/components/schemas/ShowSubquestionCondition"
+                terms:
+                  type: array
+                  items:
+                    type: string
+                subQuestions:
+                  type: object
+          observation: 
+            type: string
+      AproveReproveAnalysis:
+        type: object
+        properties:
+          status:
+            type: string
+            enum:
+              - COMPLETE
+              - REPROVED
+          historicalItem:
+            type: object
+            properties:
+              description:
+                type: string
+              justification:
+                type: string
+      PersonalData:
+        type: object
+        required:
+          - name
+          - address
+          - cellphone
+          - document
+        properties:
+          name: 
+            type: string
+          birthDate:
+            type: string
+          address:
+            $ref: "#/components/schemas/Address"
+          cellphone:
+            type: string
+          motherName:
+            type: string
+          document:
+            type: string
+          documentIssuanceDate:
+            type: string
+          responsibleIssuingDocument:
+            type: string
+          documentType:
+            type: string
+            enum:
+              - CPF
+              - RG
+              - HABILITACAO
+          documentProof:
+            type: string
+      BusinessData:
+        type: object
+        required:
+          - name
+          - address
+          - cellphone
+          - document
+        properties:
+          name: 
+            type: string
+          companyName:
+            type: string
+          typeof:
+            type: string
+            enum:
+              - MEI
+              - ME
+            default: ME
+          address:
+            $ref: "#/components/schemas/Address"
+          cellphone:
+            type: string
+          openingDate:
+            type: string
+      Negotiation:
+        type: object
+        properties:
+          contract_number:
+            type: string
+          model_selected: 
+            type: array
+          contractor:
+            type: object
+          business_rule:
+            type: object
+          technicians:
+            type: array
+          assets: 
+            type: array
+          financial:
+            type: object
+          phase:
+            type: object
+          value:
+            type: integer
+          historical_status: 
+            type: array
+          company_users: 
+            type: array
+          shipping_value:
+            type: integer
+          signal:
+            type: object
+          document_analysis: 
+            type: array
+          installation:
+            type: object
+          guarantor:
+            type: object
+          contacts_verification:
+            type: object
+          organization_ref:
+            type: string
+          created_at:
+            type: string
+          updated_at:
             type: string
       Order:
         type: object

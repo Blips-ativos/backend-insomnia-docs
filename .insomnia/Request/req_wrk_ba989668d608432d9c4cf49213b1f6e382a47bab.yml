@@ -1,26 +1,26 @@
-_id: req_723d095a59ed4e52b13e59a82800d6c0
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e382a47bab
 type: Request
-parentId: fld_598d4c7369104c1d92ca8bda1b88b957
-modified: 1654256627546
-created: 1649548406886
-url: "{{MODULE_URL}}/login/624b373210c6fc7fcb4b7e0b"
-name: login
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3ee1acfa5
+modified: 1654268846352
+created: 1654258223116
+url: "{{ base_url }}/v2/user/login/{{ orgId }}"
+name: obter token
 description: ""
 method: POST
 body:
   mimeType: application/json
   text: |-
     {
-    	"email": "izaltino.neto@blips.com.br",
-    	"password": "asd123"
+      "email": "string",
+      "password": "string"
     }
 parameters: []
 headers:
   - name: Content-Type
     value: application/json
-    id: pair_6fa7846e91f64073ad8d83581e397e1d
+    id: pair_a871d14cd1f64bffa323373426316fa7
 authentication: {}
-metaSortKey: -1649548406886
+metaSortKey: -1654258223116
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

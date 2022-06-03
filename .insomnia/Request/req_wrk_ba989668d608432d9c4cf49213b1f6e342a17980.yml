@@ -1,8 +1,8 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e342a17980
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e31b034c38
-modified: 1654256621613
-created: 1654256621613
+modified: 1654259262507
+created: 1654259262507
 url: "{{ base_url }}/pet/findByTags"
 name: Finds Pets by tags
 description: ""
@@ -14,7 +14,7 @@ parameters:
     value: string
 headers: []
 authentication: {}
-metaSortKey: -1654256621613
+metaSortKey: -1654259262507
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

@@ -1,8 +1,8 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e338e8e88f
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e312dea96f
-modified: 1654256621558
-created: 1654256621558
+modified: 1654259262487
+created: 1654259262487
 url: "{{ base_url }}/user/{{ username }}"
 name: Delete user
 description: ""
@@ -11,7 +11,7 @@ body: {}
 parameters: []
 headers: []
 authentication: {}
-metaSortKey: -1654256621558
+metaSortKey: -1654259262487
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
