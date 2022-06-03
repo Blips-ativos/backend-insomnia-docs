@@ -6,8 +6,10 @@ created: 1654256621632
 name: OpenAPI env
 data:
   scheme: http
-  base_url: http://localhost:8080
+  base_path: ""
+  host: localhost:8080
   bearerToken: ""
+  base_url: http://localhost:8080
 dataPropertyOrder:
   "&":
     - scheme

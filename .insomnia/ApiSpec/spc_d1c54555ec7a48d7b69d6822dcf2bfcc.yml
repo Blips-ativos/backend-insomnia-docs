@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1654268496934
+modified: 1654268870608
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >-
@@ -111,8 +111,6 @@ contents: >-
           - Questions
         summary: buscar perguntas de checklist
         description: "buscar perguntas de checklist"
-        requestBody:
-          $ref: "#/components/requestBodies/Question"
         responses:
           "200":
             description: successful operation
