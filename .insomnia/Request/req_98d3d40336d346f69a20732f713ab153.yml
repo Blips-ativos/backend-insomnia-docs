@@ -1,0 +1,38 @@
+_id: req_98d3d40336d346f69a20732f713ab153
+type: Request
+parentId: fld_918bf6ecea11437ea25a5d13271fb89b
+modified: 1654256622250
+created: 1654256180328
+url: "{{MODULE_URL}}/626bee529c386b72d1b1ff94/document-analysis/626bee529c386b7\
+  2d1b1ff94"
+name: aprove/reprove analysis
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"status": "COMPLETE",
+    	"historical_item": {
+    		"description": "",
+    		"justification": ""
+    	}
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_0f3a43788ab146428d488ff4953bcc44
+  - id: pair_cdd4379fcea34665815c467f2bfd8047
+    name: Authorization
+    value: Bearer {{TOKEN}}
+    description: ""
+authentication: {}
+metaSortKey: -1652772678940.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
