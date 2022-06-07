@@ -1,9 +1,9 @@
-_id: req_wrk_ba989668d608432d9c4cf49213b1f6e302b316c1
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3231b8b84
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
-modified: 1654603757693
-created: 1654600549637
-url: "{{ base_url }}/v2/negotiation/{{ negotiationId }}"
+modified: 1654637071827
+created: 1654637034907
+url: "{{ base_url }}/v2/negotiation/{{ negotiationOrClientId }}"
 name: Criação de negociação
 description: ""
 method: POST
@@ -48,12 +48,12 @@ parameters: []
 headers:
   - name: Content-Type
     value: application/json
-    id: pair_82c0f51fffb54a839d7a9c01529d98de
+    id: pair_90b3879dae3d404c868fbdf59d92dc1f
 authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1654600549637
+metaSortKey: -1654637034907
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

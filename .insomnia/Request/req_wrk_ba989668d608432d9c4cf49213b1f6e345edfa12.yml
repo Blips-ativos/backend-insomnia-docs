@@ -1,7 +1,7 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e345edfa12
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
-modified: 1654603758364
+modified: 1654635531877
 created: 1654600549634
 url: "{{ base_url }}/v2/negotiation/{{ negotiationId }}/document-analysis/{{
   analysisId }}"
