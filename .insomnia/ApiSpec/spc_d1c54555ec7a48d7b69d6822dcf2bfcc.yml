@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1654268870608
+modified: 1654638934854
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >-
@@ -37,6 +37,7 @@ contents: >-
       externalDocs:
         description: Find out more about our store
         url: http://swagger.io
+
 
         
   paths:
@@ -123,7 +124,103 @@ contents: >-
              
           "400":
             description: Invalid input
-    /v2/negociation/{negotiationId}/document-analysis/{analysisId}:
+    /v2/negotiation/{negotiationOrClientId}:
+      get:
+        security:
+          - bearerAuth: []
+        tags:
+          - Negotiation
+        summary: Negociação com id ou Negociações por id de cliente
+        description: "Atualização de negociação"
+        parameters:
+          - name: negotiationOrClientId
+            in: path
+            description: ID da negociação ou cliente
+            required: true
+            schema:
+              type: integer
+              format: int64
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  oneOf:
+                    - $ref: "#/components/schemas/Negotiation"
+                    - type: object
+                      properties:
+                        data:
+                          $ref: "#/components/schemas/Negotiation"
+                        pagination:
+                          type: object
+                          properties:
+                            current:
+                              type: integer
+                            maxPage:
+                              type: integer
+                            pageSize:
+                              type: integer
+                            total:
+                              type: integer
+             
+          "400":
+            description: Invalid input
+      put:
+        security:
+          - bearerAuth: []
+        tags:
+          - Negotiation
+        summary: Atualização de negociação
+        description: "Atualização de negociação"
+        parameters:
+          - name: negotiationOrClientId
+            in: path
+            description: ID da negociação
+            required: true
+            schema:
+              type: integer
+              format: int64
+        requestBody:
+          $ref: "#/components/requestBodies/NegotiationUpdateRB"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Negotiation"
+             
+          "400":
+            description: Invalid input
+      post:
+        security:
+          - bearerAuth: []
+        tags:
+          - Negotiation
+        summary: Criação de negociação
+        description: "Criação de negociação"
+        parameters:
+          - name: negotiationOrClientId
+            in: path
+            description: ID do clientee
+            required: true
+            schema:
+              type: integer
+              format: int64
+        requestBody:
+          $ref: "#/components/requestBodies/NegotiationRB"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Negotiation"
+             
+          "400":
+            description: Invalid input
+    /v2/negotiation/{negotiationId}/document-analysis/{analysisId}:
       post:
         security:
           - bearerAuth: []
@@ -576,6 +673,7 @@ contents: >-
           "404":
             description: User not found
 
+
             
   externalDocs:
     description: Find out more about Swagger
@@ -614,11 +712,16 @@ contents: >-
           application/json:
             schema:
               $ref: "#/components/schemas/AproveReproveAnalysis"
-      Negotiation:
+      NegotiationRB:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Negotiation"
+              $ref: "#/components/schemas/NegotiationRB"
+      NegotiationUpdateRB:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NegotiationUpdateRB"
       UserArray:
         content:
           application/json:
@@ -872,6 +975,8 @@ contents: >-
       Negotiation:
         type: object
         properties:
+          id:
+            type: string
           contract_number:
             type: string
           model_selected: 
@@ -880,6 +985,95 @@ contents: >-
             type: object
           business_rule:
             type: object
+          technicians:
+            type: array
+          assets: 
+            type: array
+          financial:
+            type: object
+          phase:
+            type: object
+          value:
+            type: integer
+          historical_status: 
+            type: array
+          company_users: 
+            type: array
+          shipping_value:
+            type: integer
+          signal:
+            type: object
+          document_analysis: 
+            type: array
+          installation:
+            type: object
+          guarantor:
+            type: object
+          contacts_verification:
+            type: object
+          organization_ref:
+            type: string
+          created_at:
+            type: string
+          updated_at:
+            type: string
+      NegotiationRB:
+        type: object
+        properties:
+          contract_number:
+            type: string
+          model_selected: 
+            type: array
+          contractor:
+            type: object
+          business_rule:
+            type: object
+          technicians:
+            type: array
+          assets: 
+            type: array
+          financial:
+            type: object
+          phase:
+            type: object
+          value:
+            type: integer
+          historical_status: 
+            type: array
+          company_users: 
+            type: array
+          shipping_value:
+            type: integer
+          signal:
+            type: object
+          document_analysis: 
+            type: array
+          installation:
+            type: object
+          guarantor:
+            type: object
+          contacts_verification:
+            type: object
+          organization_ref:
+            type: string
+          created_at:
+            type: string
+          updated_at:
+            type: string
+      NegotiationUpdateRB:
+        type: object
+        properties:
+          contract_number:
+            type: string
+          model_selected: 
+            type: array
+          contractor:
+            type: object
+          checklists:
+            type: array
+            items:
+              type: object
+              
           technicians:
             type: array
           assets: 

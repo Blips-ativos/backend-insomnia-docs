@@ -1,0 +1,64 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e31d44ca3c
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
+modified: 1654636942129
+created: 1654636942129
+url: "{{ base_url }}/v2/negotiation/{{ negotiationOrClientId }}"
+name: Atualização de negociação
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "contract_number": "string",
+      "model_selected": [
+        null
+      ],
+      "contractor": {},
+      "checklists": [
+        {}
+      ],
+      "technicians": [
+        null
+      ],
+      "assets": [
+        null
+      ],
+      "financial": {},
+      "phase": {},
+      "value": 0,
+      "historical_status": [
+        null
+      ],
+      "company_users": [
+        null
+      ],
+      "shipping_value": 0,
+      "signal": {},
+      "document_analysis": [
+        null
+      ],
+      "installation": {},
+      "guarantor": {},
+      "contacts_verification": {},
+      "organization_ref": "string",
+      "created_at": "string",
+      "updated_at": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1654636942129
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
