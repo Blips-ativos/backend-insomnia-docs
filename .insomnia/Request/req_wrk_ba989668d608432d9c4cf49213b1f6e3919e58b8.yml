@@ -1,0 +1,31 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3919e58b8
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
+modified: 1654814316026
+created: 1654814316026
+url: "{{ base_url }}/v2/negotiation/{{ negotiationId }}/guarantor"
+name: Remoção de fiador
+description: ""
+method: DELETE
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "justification": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1654814316026
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,33 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3575ec538
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
+modified: 1654812950051
+created: 1654812950051
+url: "{{ base_url }}/v2/negotiation/{{ negotiationId }}/historical"
+name: Criação de item de histórico
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "type": "string",
+      "description": "string",
+      "justification": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1654812950051
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
