@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1654802775260
+modified: 1654803644385
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >-
@@ -37,6 +37,7 @@ contents: >-
       externalDocs:
         description: Find out more about our store
         url: http://swagger.io
+
 
 
 
@@ -678,6 +679,7 @@ contents: >-
 
 
 
+
             
   externalDocs:
     description: Find out more about Swagger
@@ -746,6 +748,34 @@ contents: >-
         description: Pet object that needs to be added to the store
         required: true
     schemas:
+      HistoricalItemSlim:
+        type: object
+        properties:
+          type: 
+            type: string
+            enum:
+              - EDIT_BASIC_INFO
+              - EDIT_BANK_DETAILS
+              - NOTE
+              - SYSTEM
+              - CHATBOT
+              - CREATE_CONTRATC_TECHNICIAN
+              - TECHNICIAN_CHANGE
+              - CHANGE_INSTALLATION_DATE
+              - ACTIVE_TECHNICIAN
+              - INACTIVE_TECHNICIAN
+              - SETTINGS
+              - ACTIVE_CANCELLED_ENTREPRENEUR
+              - TRUST_UNLOCK
+              - EDIT_PERSONAL_DATA
+              - EDIT_BUSINESS_DATA
+              - CUSTOMER_SERVICE
+              - ANALYSIS_APROVED
+              - ANALYSIS_REPROVED
+          description: 
+            type: string
+          justification: 
+            type: string
       Address:
         type: object
         required:
@@ -1106,14 +1136,7 @@ contents: >-
           organization_ref:
             type: string
           historical_item:
-            type: object
-            properties:
-              typeof: 
-                type: string
-              description: 
-                type: string
-              justification: 
-                type: string
+            $ref: "#/components/schemas/HistoricalItemSlim"
           created_at:
             type: string
           updated_at:
