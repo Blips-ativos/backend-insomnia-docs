@@ -1,7 +1,7 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e3870c48d0
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
-modified: 1654636942132
+modified: 1654793468041
 created: 1654636942132
 url: "{{ base_url }}/v2/negotiation/{{ negotiationOrClientId }}"
 name: Atualização de negociação

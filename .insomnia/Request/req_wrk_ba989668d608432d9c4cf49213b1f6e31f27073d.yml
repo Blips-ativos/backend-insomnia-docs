@@ -1,15 +1,72 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e31f27073d
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e39a1fc173
-modified: 1654268878760
+modified: 1654794409388
 created: 1654262299012
 url: "{{ base_url }}/v2/adm/questions"
 name: criar pergunta de checklist
 description: ""
 method: POST
-body: {}
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "label": "string",
+      "typeof": "OPTION",
+      "options": {
+        "value": "string",
+        "label": "string",
+        "description": "string"
+      },
+      "required": true,
+      "mask": "string",
+      "requirements": [
+        "string"
+      ],
+      "showSubquestionCondition": {
+        "value": "string",
+        "label": "string",
+        "description": "string"
+      },
+      "terms": [
+        "string"
+      ],
+      "subQuestions": [
+        {
+          "id": "string",
+          "label": "string",
+          "typeof": "TEXT",
+          "uploadOrigin": [
+            "CAMERA"
+          ],
+          "options": {
+            "value": "string",
+            "label": "string",
+            "description": "string"
+          },
+          "required": false,
+          "mask": "string",
+          "requirements": [
+            "string"
+          ],
+          "showSubquestionCondition": {
+            "value": "string",
+            "label": "string",
+            "description": "string"
+          },
+          "terms": [
+            "string"
+          ],
+          "subQuestions": {}
+        }
+      ],
+      "observation": "string"
+    }
 parameters: []
-headers: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_8d512b58972a46129428fbc3a146fa7f
 authentication:
   type: bearer
   token: "{{bearerToken}}"

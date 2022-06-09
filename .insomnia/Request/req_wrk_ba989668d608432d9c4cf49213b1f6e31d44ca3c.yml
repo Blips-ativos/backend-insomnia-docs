@@ -1,7 +1,7 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e31d44ca3c
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
-modified: 1654636942129
+modified: 1654802775917
 created: 1654636942129
 url: "{{ base_url }}/v2/negotiation/{{ negotiationOrClientId }}"
 name: Atualização de negociação
@@ -50,6 +50,7 @@ parameters: []
 headers:
   - name: Content-Type
     value: application/json
+    id: pair_c70e3feeff71416287d102a08c42c0da
 authentication:
   type: bearer
   token: "{{bearerToken}}"
