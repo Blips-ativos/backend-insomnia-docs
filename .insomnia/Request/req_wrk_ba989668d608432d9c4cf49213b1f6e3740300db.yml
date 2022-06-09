@@ -1,9 +1,9 @@
-_id: req_wrk_ba989668d608432d9c4cf49213b1f6e345edfa12
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3740300db
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
-modified: 1654794406797
-created: 1654600549634
-url: "{{ base_url }}/v2/negotiation/{{ negotiationId }}/document-analysis/{{
+modified: 1654794407766
+created: 1654267632373
+url: "{{ base_url }}/v2/negociation/{{ negotiationId }}/document-analysis/{{
   analysisId }}"
 name: aprovar/reprovar analise
 description: ""
@@ -22,12 +22,12 @@ parameters: []
 headers:
   - name: Content-Type
     value: application/json
-    id: pair_30671acefed04c2281142a0529328fbb
+    id: pair_a54d139301824951812ae8edd25418ec
 authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1654600549634
+metaSortKey: -1654267632373
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

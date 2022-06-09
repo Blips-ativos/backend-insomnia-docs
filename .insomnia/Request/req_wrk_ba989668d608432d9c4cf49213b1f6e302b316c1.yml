@@ -1,12 +1,12 @@
-_id: req_wrk_ba989668d608432d9c4cf49213b1f6e31d44ca3c
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e302b316c1
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
-modified: 1654802775917
-created: 1654636942129
-url: "{{ base_url }}/v2/negotiation/{{ negotiationOrClientId }}"
-name: Atualização de negociação
+modified: 1654794405169
+created: 1654600549637
+url: "{{ base_url }}/v2/negotiation/{{ negotiationId }}"
+name: Criação de negociação
 description: ""
-method: PUT
+method: POST
 body:
   mimeType: application/json
   text: |-
@@ -16,9 +16,7 @@ body:
         null
       ],
       "contractor": {},
-      "checklists": [
-        {}
-      ],
+      "business_rule": {},
       "technicians": [
         null
       ],
@@ -50,12 +48,12 @@ parameters: []
 headers:
   - name: Content-Type
     value: application/json
-    id: pair_c70e3feeff71416287d102a08c42c0da
+    id: pair_82c0f51fffb54a839d7a9c01529d98de
 authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1654636942129
+metaSortKey: -1654600549637
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
