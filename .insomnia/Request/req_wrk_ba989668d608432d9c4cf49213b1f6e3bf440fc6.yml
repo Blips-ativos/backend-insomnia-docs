@@ -1,0 +1,56 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3bf440fc6
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
+modified: 1654814316028
+created: 1654814316028
+url: "{{ base_url }}/v2/negotiation/{{ negotiationId }}/guarantor"
+name: Editar fiador
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "fullName": "string",
+      "cpf": "string",
+      "email": "string",
+      "birthDate": "string",
+      "address": {
+        "state": "string",
+        "city": "string",
+        "number": "string",
+        "zipCode": "string",
+        "stAve": "string",
+        "neighborhood": "string",
+        "complement": "string",
+        "proofOfResidence": "string"
+      },
+      "cellphone": "string",
+      "motherName": "string",
+      "rg": "string",
+      "rgEmmitDate": "string",
+      "rgEmmitOrg": "string",
+      "copyOfDocumentFront": "string",
+      "copyOfDocumentBack": "string",
+      "selfieWithDocument": "string",
+      "income": 0,
+      "proofOfIncome": "string",
+      "aproved": "string",
+      "userAproved": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1654814316028
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

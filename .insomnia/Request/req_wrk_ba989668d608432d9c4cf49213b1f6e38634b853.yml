@@ -1,22 +1,21 @@
-_id: req_wrk_ba989668d608432d9c4cf49213b1f6e345edfa12
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e38634b853
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
-modified: 1654803644342
-created: 1654803644342
-url: "{{ base_url }}/v2/negotiation/{{ negotiationId }}/document-analysis/{{
-  analysisId }}"
-name: aprovar/reprovar analise
+modified: 1654812950046
+created: 1654812950046
+url: "{{ base_url }}/v2/negotiation/{{ negotiationId }}/insert-company-user"
+name: Inserção de usuário em negociação
 description: ""
-method: POST
+method: PATCH
 body:
   mimeType: application/json
   text: |-
     {
-      "status": "string",
-      "historicalItem": {
-        "description": "string",
-        "justification": "string"
-      }
+      "id": "string",
+      "document": "string",
+      "name": "string",
+      "linked_date": "string",
+      "linked_id_user": "string"
     }
 parameters: []
 headers:
@@ -26,7 +25,7 @@ authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1654803644342
+metaSortKey: -1654812950046
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

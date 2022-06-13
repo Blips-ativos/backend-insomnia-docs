@@ -1,8 +1,8 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e3231b8b84
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
-modified: 1654802029116
-created: 1654637034907
+modified: 1654803645003
+created: 1654803644345
 url: "{{ base_url }}/v2/negotiation/{{ negotiationOrClientId }}"
 name: Criação de negociação
 description: ""
@@ -48,12 +48,12 @@ parameters: []
 headers:
   - name: Content-Type
     value: application/json
-    id: pair_90b3879dae3d404c868fbdf59d92dc1f
+    id: pair_bc37199591d14ad9ba8d70cf4ec33729
 authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1654637034907
+metaSortKey: -1654803644345
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
