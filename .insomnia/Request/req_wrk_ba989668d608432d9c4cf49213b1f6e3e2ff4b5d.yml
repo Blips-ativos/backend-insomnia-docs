@@ -1,0 +1,32 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3e2ff4b5d
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e319da4ee7
+modified: 1655152077097
+created: 1655152073704
+url: "{{ base_url }}/v2/adm/calc-frete/{{ modelId }}"
+name: Calcular frete
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "recipientCep": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_9701586c450b49e4909b1c59c38b9bbd
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1655152073705
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
