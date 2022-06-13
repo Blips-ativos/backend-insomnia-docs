@@ -1,0 +1,10 @@
+_id: fld_wrk_ba989668d608432d9c4cf49213b1f6e319da4ee7
+type: RequestGroup
+parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
+modified: 1655152073761
+created: 1655152073761
+name: Adm
+description: Endpoints relacionados à negociações
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1655152073761
