@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1654814316093
+modified: 1655148799999
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: |
@@ -23,6 +23,8 @@ contents: |
     - name: Questions
       description: Endpoints relacionados à perguntas de checklist
     - name: Negotiation
+      description: Endpoints relacionados à negociações
+    - name: Adm
       description: Endpoints relacionados à negociações
 
 
@@ -529,6 +531,33 @@ contents: |
              
           "400":
             description: Invalid input
+    /v2/adm/calc-frete/{modelId}:
+      post:
+        security:
+          - bearerAuth: []
+        tags:
+          - Adm
+        summary: Calcular frete
+        description: "Calcular frete"
+        parameters:
+          - name: modelId
+            in: path
+            description: ID do modelo
+            required: true
+            schema:
+              type: string
+        requestBody:
+          $ref: "#/components/requestBodies/CalcFreteRB"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Frete"
+             
+          "400":
+            description: Invalid input
   externalDocs:
     description: Find out more about Swagger
     url: http://swagger.io
@@ -586,8 +615,51 @@ contents: |
           application/json:
             schema:
               $ref: "#/components/schemas/NegotiationUpdateRB"
-
+      CalcFreteRB:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CalcFreteRB"
     schemas:
+      CalcFreteRB:
+        type: object
+        properties:
+          sellerCep:
+            type: string
+          recipientCep:
+            type: string
+      Frete:
+        type: object
+        properties:
+          shippingSevicesArray:
+            type: array
+            items:
+              type: object
+              properties:
+                allowBuyLabel:
+                  type: boolean
+                carrier:
+                  type: string
+                carrierCode:
+                  type: string
+                deliveryTime:
+                  type: string
+                error:
+                  type: boolean
+                originalDeliveryTime:
+                  type: string
+                originalShippingPrice:
+                  type: string
+                responseTime:
+                  type: string
+                serviceCode:
+                  type: string
+                serviceDescription:
+                  type: string
+                shippingPrice:
+                  type: string
+          timeout:
+            type: integer 
       Guarantor:
         type: object
         required:
