@@ -1,7 +1,7 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e3e2ff4b5d
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e319da4ee7
-modified: 1655152077097
+modified: 1655234191715
 created: 1655152073704
 url: "{{ base_url }}/v2/adm/calc-frete/{{ modelId }}"
 name: Calcular frete

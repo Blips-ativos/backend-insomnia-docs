@@ -1,0 +1,79 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e322599da3
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
+modified: 1655234193568
+created: 1655234185912
+url: "{{ base_url }}/v2/negotiation/{{ negotiationOrClientId }}"
+name: Atualização de negociação
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "contract_number": "string",
+      "model_selected": [
+        null
+      ],
+      "address": {
+        "state": "string",
+        "city": "string",
+        "number": "string",
+        "zipCode": "string",
+        "stAve": "string",
+        "neighborhood": "string",
+        "complement": "string",
+        "proofOfResidence": "string"
+      },
+      "checklists": [
+        {}
+      ],
+      "technicians": [
+        null
+      ],
+      "assets": [
+        null
+      ],
+      "financial": {},
+      "phase": {},
+      "value": 0,
+      "historical_status": [
+        null
+      ],
+      "company_users": [
+        null
+      ],
+      "shipping_value": 0,
+      "signal": {},
+      "document_analysis": [
+        null
+      ],
+      "installation": {},
+      "guarantor": {},
+      "contacts_verification": {},
+      "organization_ref": "string",
+      "historical_item": {
+        "type": "string",
+        "description": "string",
+        "justification": "string"
+      },
+      "created_at": "string",
+      "updated_at": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_2579e032052846ec8fcd913eae1f7f2c
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1655234185912
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

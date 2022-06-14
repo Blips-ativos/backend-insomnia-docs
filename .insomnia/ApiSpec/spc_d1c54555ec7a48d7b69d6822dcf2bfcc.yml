@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1655152073783
+modified: 1655234191217
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: |
@@ -136,7 +136,7 @@ contents: |
                   $ref: "#/components/schemas/Negotiation"
           "400":
             description: Invalid input
-      put:
+      patch:
         security:
           - bearerAuth: []
         tags:
@@ -1056,8 +1056,8 @@ contents: |
             type: string
           model_selected: 
             type: array
-          contractor:
-            type: object
+          address:
+            $ref: "#/components/schemas/Address"
           checklists:
             type: array
             items:
