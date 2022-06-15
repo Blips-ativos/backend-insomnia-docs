@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1655336466453
+modified: 1655336599497
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: |
@@ -153,7 +153,8 @@ contents: |
             description: successful operation
             content:
               application/json:
-                $ref: "#/components/schemas/Question"
+                schema:
+                 $ref: "#/components/schemas/Question"
              
           "400":
             description: Invalid input
@@ -178,8 +179,8 @@ contents: |
             description: successful operation
             content:
               application/json:
-                $ref: "#/components/schemas/Question"
-             
+                schema:
+                  $ref: "#/components/schemas/Question"
           "400":
             description: Invalid input
       delete:
@@ -201,8 +202,8 @@ contents: |
             description: successful operation
             content:
               application/json:
-                $ref: "#/components/schemas/Question"
-              
+                schema:
+                  $ref: "#/components/schemas/Question"
           "400":
             description: Invalid input
     /v2/adm/questions/{questionId}/disabled:
