@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1655234191217
+modified: 1655320425032
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: |
@@ -728,6 +728,7 @@ contents: |
               - CUSTOMER_SERVICE
               - ANALYSIS_APROVED
               - ANALYSIS_REPROVED
+              - SHIPPING
           description: 
             type: string
           justification: 
@@ -988,6 +989,8 @@ contents: |
             type: array
           company_users: 
             type: array
+          shipping:
+            type: object
           shipping_value:
             type: integer
           signal:
@@ -1031,6 +1034,8 @@ contents: |
             type: array
           company_users: 
             type: array
+          shipping:
+            type: object
           shipping_value:
             type: integer
           signal:
@@ -1076,6 +1081,8 @@ contents: |
             type: array
           company_users: 
             type: array
+          shipping:
+            type: object
           shipping_value:
             type: integer
           signal:
