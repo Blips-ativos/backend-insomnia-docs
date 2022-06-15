@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1655320425032
+modified: 1655334965117
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: |
@@ -558,6 +558,96 @@ contents: |
              
           "400":
             description: Invalid input
+    /v2/adm/segments:
+      get:
+        security:
+          - bearerAuth: []
+        tags:
+          - Segments
+        summary: listar segmentos
+        description: "listar segmentos"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      items:
+                        $ref: "#/components/schemas/Segment"
+             
+          "400":
+            description: Invalid input
+      post:
+        security:
+          - bearerAuth: []
+        tags:
+          - Segments
+        summary: criar pergunta de checklist
+        description: "criar pergunta de checklist"
+        requestBody:
+          $ref: "#/components/requestBodies/SegmentRB"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Segment"
+          "400":
+            description: Invalid input
+    /V2/adm/segments/{segmentId}:
+      put:
+        security:
+          - bearerAuth: []
+        tags:
+          - Segments
+        summary: Editar segmento
+        description: "Editar segmento"
+        parameters:
+          - name: segmentId
+            in: path
+            description: ID do segmento
+            required: true
+            schema:
+              type: string
+        requestBody:
+          $ref: "#/components/requestBodies/SegmentRB"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Segment"
+          "400":
+            description: Invalid input
+      delete:
+        security:
+          - bearerAuth: []
+        tags:
+          - Segments
+        summary: deletar segmento
+        description: "deletar segmento"
+        parameters:
+          - name: segmentId
+            in: path
+            description: ID do segmento
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Segment"
+          "400":
+            description: Invalid input
   externalDocs:
     description: Find out more about Swagger
     url: http://swagger.io
@@ -620,7 +710,43 @@ contents: |
           application/json:
             schema:
               $ref: "#/components/schemas/CalcFreteRB"
+      SegmentRB:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SegmentRB"
     schemas:
+      SegmentRB:
+        type: object
+        properties:
+          name:
+            type: string
+          description:
+            type: string
+      Segment:
+        type: object
+        properties:
+          id:
+            type: string
+          name:
+            type: string
+          description:
+            type: string
+          disabled:
+            type: boolean
+          historical:
+            type: array
+          createdAt:
+            type: string
+          updatedAt:
+            type: string
+          createUser:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
       CalcFreteRB:
         type: object
         properties:
