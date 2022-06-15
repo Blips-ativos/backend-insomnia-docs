@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1655334965117
+modified: 1655336466453
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: |
@@ -26,7 +26,8 @@ contents: |
       description: Endpoints relacionados à negociações
     - name: Adm
       description: Endpoints relacionados à negociações
-
+    - name: Segments
+      description: Endpoints relacionados à segmentos
 
   paths:
     /v2/user/login/{orgId}:
@@ -109,6 +110,154 @@ contents: |
                   type: array
                   items:
                     $ref: "#/components/schemas/Question"
+             
+          "400":
+            description: Invalid input
+    /v2/adm/questions/disabled:
+      get:
+        security:
+          - bearerAuth: []
+        tags:
+          - Questions
+        summary: buscar perguntas de checklist desabilitadas
+        description: "buscar perguntas de checklist desabilitadas"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/Question"
+             
+          "400":
+            description: Invalid input
+    /v2/adm/questions/{questionId}:
+      get:
+        security:
+          - bearerAuth: []
+        tags:
+          - Questions
+        summary: buscar pergunta de checklist
+        description: "buscar pergunta de checklist"
+        parameters:
+          - name: questionId
+            in: path
+            description: ID da pergunta
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                $ref: "#/components/schemas/Question"
+             
+          "400":
+            description: Invalid input
+      put:
+        security:
+          - bearerAuth: []
+        tags:
+          - Questions
+        summary: Editar pergunta de checklist
+        description: "Editar pergunta de checklist"
+        parameters:
+          - name: questionId
+            in: path
+            description: ID da pergunta
+            required: true
+            schema:
+              type: string
+        requestBody:
+          $ref: "#/components/requestBodies/Question"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                $ref: "#/components/schemas/Question"
+             
+          "400":
+            description: Invalid input
+      delete:
+        security:
+          - bearerAuth: []
+        tags:
+          - Questions
+        summary: Deletar pergunta de checklist
+        description: "Deletar pergunta de checklist"
+        parameters:
+          - name: questionId
+            in: path
+            description: ID da pergunta
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                $ref: "#/components/schemas/Question"
+              
+          "400":
+            description: Invalid input
+    /v2/adm/questions/{questionId}/disabled:
+      put:
+        security:
+          - bearerAuth: []
+        tags:
+          - Questions
+        summary: desabilitar pergunta de checklist
+        description: "desabilitar pergunta de checklist"
+        parameters:
+          - name: questionId
+            in: path
+            description: ID da pergunta
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    justification:
+                      type: string
+             
+          "400":
+            description: Invalid input
+    /v2/adm/questions/{questionId}/enabled:
+      put:
+        security:
+          - bearerAuth: []
+        tags:
+          - Questions
+        summary: habilitar pergunta de checklist
+        description: "habilitar pergunta de checklist"
+        parameters:
+          - name: questionId
+            in: path
+            description: ID da pergunta
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    justification:
+                      type: string
              
           "400":
             description: Invalid input
