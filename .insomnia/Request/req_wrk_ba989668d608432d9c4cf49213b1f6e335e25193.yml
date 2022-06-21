@@ -1,0 +1,24 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e335e25193
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e39a1fc173
+modified: 1655825675179
+created: 1655825675179
+url: "{{ base_url }}/v2/adm/questions/{{ questionId }}/disabled"
+name: desabilitar pergunta de checklist
+description: ""
+method: PUT
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1655825675179
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,25 @@
+_id: req_cb4bab1312784f97be7088ca7a6cfde4
+type: Request
+parentId: fld_8b0d169e8c4443ba82a92b479bc153ff
+modified: 1652796113938
+created: 1649943911235
+url: "{{MODULE_URL}}/6258243fa08fa8acf3de36d7"
+name: DELETE
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers:
+  - id: pair_ef75563cf30948eab074ab75a3a6b219
+    name: Authorization
+    value: Bearer {{TOKEN}}
+    description: ""
+authentication: {}
+metaSortKey: -1649943911235
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,24 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e35c9cde52
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e36648f8ac
+modified: 1655825675036
+created: 1655825675036
+url: "{{ base_url }}/V2/adm/segments/{{ segmentId }}"
+name: deletar segmento
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1655825675036
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

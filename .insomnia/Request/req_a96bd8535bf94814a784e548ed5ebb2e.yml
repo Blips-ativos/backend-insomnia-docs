@@ -1,0 +1,25 @@
+_id: req_a96bd8535bf94814a784e548ed5ebb2e
+type: Request
+parentId: fld_918bf6ecea11437ea25a5d13271fb89b
+modified: 1654637097388
+created: 1651607754320
+url: "{{MODULE_URL}}/<negociation_uid>/remove-company-user/<user_uid>"
+name: remove user
+description: ""
+method: PATCH
+body: {}
+parameters: []
+headers:
+  - id: pair_bb0e8be5dce64247a2abbd058cd136d6
+    name: Authorization
+    value: Bearer {{TOKEN}}
+    description: ""
+authentication: {}
+metaSortKey: -1651566302117
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,13 @@
+_id: fld_37e58615e1104709a7c7753a83995285
+type: RequestGroup
+parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
+modified: 1653075193033
+created: 1652728066211
+name: integrations container
+description: ""
+environment:
+  BASE_URL: http://localhost:8080
+environmentPropertyOrder:
+  "&":
+    - BASE_URL
+metaSortKey: -1652728066211

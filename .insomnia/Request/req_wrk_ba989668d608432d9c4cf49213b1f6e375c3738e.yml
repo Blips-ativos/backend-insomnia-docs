@@ -1,28 +1,28 @@
-_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3164b0fb6
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e375c3738e
 type: Request
-parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3ee1acfa5
-modified: 1655334722252
-created: 1654259262509
-url: "{{ base_url }}/v2/user/refresh-token"
-name: refresh token
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e36648f8ac
+modified: 1655825675039
+created: 1655825675039
+url: "{{ base_url }}/V2/adm/segments/{{ segmentId }}"
+name: Editar segmento
 description: ""
-method: POST
+method: PUT
 body:
   mimeType: application/json
   text: |-
     {
-      "refreshToken": "string"
+      "name": "string",
+      "description": "string"
     }
 parameters: []
 headers:
   - name: Content-Type
     value: application/json
-    id: pair_ad347d500e994781ad9f192e90e5a21a
 authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1654259262509
+metaSortKey: -1655825675039
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

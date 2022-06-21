@@ -1,0 +1,106 @@
+_id: req_c030e82b99f341d08aed7a75e8a4c7c8
+type: Request
+parentId: fld_918bf6ecea11437ea25a5d13271fb89b
+modified: 1655825210526
+created: 1651862117099
+url: "{{MODULE_URL}}/627290b89a947a45bc958b8e"
+name: UPDATE
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"contract_number": "3",
+    	"business_rule": {
+    		"description": "TESTE",
+    		"type": "LOCACAO",
+    		"checklist_phases": [],
+    		"selected_commercial_definition": {
+    			"createdUser": {
+    				"id": "624d95cb7096d924cebf765a",
+    				"name": "teste123"
+    			},
+    			"description": "Preço padrão",
+    			"disabled": false,
+    			"instalationValue": 2000.0,
+    			"installmentValue": 2000.0,
+    			"numberOfInstallments": 36,
+    			"signalValue": 2000.0,
+    			"id": "62704e3ec7bdcabee5e8677e"
+    		},
+    		"commercial_definitions": [],
+    		"checklists": [
+    			{
+    				"name": "",
+    				"phase": "LOCACAO",
+    				"status": "",
+    				"questions": [
+    					{
+    						"id": "62708c4eb166110eb78751f7",
+    						"label": "Quantos metros quadrados (m²) você imprime por mês?",
+    						"organizacao_ref": "blips-ativos-1649096498.4232771",
+    						"typeof": "TEXT",
+    						"upload_origin": [],
+    						"options": [
+    							{
+    								"value": "1",
+    								"label": "Até 100 (m²)."
+    							},
+    							{
+    								"value": "5",
+    								"label": "101 a 200 (m²)."
+    							},
+    							{
+    								"value": "6",
+    								"label": "Mais de 200 (m²)."
+    							}
+    						],
+    						"required": false,
+    						"mask": "NONE",
+    						"requirements": [],
+    						"terms": [],
+    						"sub_questions": [],
+    						"answer": ""
+    					}
+    				]
+    			}
+    		]
+    	},
+    	"technicians": {},
+    	"assets": [],
+    	"financial": {},
+    	"phase": {
+    		"name": "LOCACAO",
+    		"is_reproved": false,
+    		"linked_id_user": ""
+    	},
+    	"value": 2000.0,
+    	"shipping_value": 999.0,
+    	"signal": {},
+    	"installation": {},
+    	"guarantor": {},
+    	"historical_item": {
+    		"type": "EDIT_BASIC_INFO",
+    		"description": "bla vbla bla",
+    		"justification": "lorem ipsum dolor"
+    	}
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_7a10ae0f9f6945bf8bbcc81f063b1285
+  - id: pair_cf6d797d0f6f4bbf844c27c91304cb91
+    name: Authorization
+    value: Bearer {{TOKEN}}
+    description: ""
+authentication: {}
+metaSortKey: -1651862117099
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

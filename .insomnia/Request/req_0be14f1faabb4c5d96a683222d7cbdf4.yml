@@ -1,0 +1,37 @@
+_id: req_0be14f1faabb4c5d96a683222d7cbdf4
+type: Request
+parentId: fld_918bf6ecea11437ea25a5d13271fb89b
+modified: 1654637096439
+created: 1651607700137
+url: "{{MODULE_URL}}/<negociation_uid>/insert-company-user"
+name: insert user
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"id": "",
+    	"document": "",
+    	"name": "",
+    	"linked_date": "",
+    	"linked_id_user": ""
+    }
+parameters: []
+headers:
+  - id: pair_bb0e8be5dce64247a2abbd058cd136d6
+    name: Authorization
+    value: Bearer {{TOKEN}}
+    description: ""
+  - name: Content-Type
+    value: application/json
+    id: pair_e23d0386375445539433d209ccd0dcf7
+authentication: {}
+metaSortKey: -1651607700137
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

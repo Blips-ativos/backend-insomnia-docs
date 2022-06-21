@@ -1,0 +1,63 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e302b316c1
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
+modified: 1654794405169
+created: 1654600549637
+url: "{{ base_url }}/v2/negotiation/{{ negotiationId }}"
+name: Criação de negociação
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "contract_number": "string",
+      "model_selected": [
+        null
+      ],
+      "contractor": {},
+      "business_rule": {},
+      "technicians": [
+        null
+      ],
+      "assets": [
+        null
+      ],
+      "financial": {},
+      "phase": {},
+      "value": 0,
+      "historical_status": [
+        null
+      ],
+      "company_users": [
+        null
+      ],
+      "shipping_value": 0,
+      "signal": {},
+      "document_analysis": [
+        null
+      ],
+      "installation": {},
+      "guarantor": {},
+      "contacts_verification": {},
+      "organization_ref": "string",
+      "created_at": "string",
+      "updated_at": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_82c0f51fffb54a839d7a9c01529d98de
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1654600549637
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

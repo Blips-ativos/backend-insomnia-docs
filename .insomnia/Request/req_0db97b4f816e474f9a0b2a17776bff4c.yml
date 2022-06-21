@@ -1,0 +1,25 @@
+_id: req_0db97b4f816e474f9a0b2a17776bff4c
+type: Request
+parentId: fld_918bf6ecea11437ea25a5d13271fb89b
+modified: 1654637098852
+created: 1651604610641
+url: "{{MODULE_URL}}/by-organization"
+name: ALL by organization
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_4229dd5c55e94f9c8adb3fe0ad64bc75
+    name: Authorization
+    value: Bearer {{TOKEN}}
+    description: ""
+authentication: {}
+metaSortKey: -1651524904097
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

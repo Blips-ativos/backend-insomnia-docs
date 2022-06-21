@@ -1,0 +1,80 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e327901074
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e39a1fc173
+modified: 1655825675241
+created: 1655825675241
+url: "{{ base_url }}/v2/adm/questions/{{ questionId }}"
+name: Editar pergunta de checklist
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "label": "string",
+      "typeof": "string",
+      "options": {
+        "value": "string",
+        "label": "string",
+        "description": "string"
+      },
+      "required": true,
+      "mask": "string",
+      "requirements": [
+        "string"
+      ],
+      "showSubquestionCondition": {
+        "value": "string",
+        "label": "string",
+        "description": "string"
+      },
+      "terms": [
+        "string"
+      ],
+      "subQuestions": [
+        {
+          "id": "string",
+          "label": "string",
+          "typeof": "TEXT",
+          "uploadOrigin": [
+            "string"
+          ],
+          "options": {
+            "value": "string",
+            "label": "string",
+            "description": "string"
+          },
+          "required": true,
+          "mask": "string",
+          "requirements": [
+            "string"
+          ],
+          "showSubquestionCondition": {
+            "value": "string",
+            "label": "string",
+            "description": "string"
+          },
+          "terms": [
+            "string"
+          ],
+          "subQuestions": {}
+        }
+      ],
+      "observation": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1655825675241
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
