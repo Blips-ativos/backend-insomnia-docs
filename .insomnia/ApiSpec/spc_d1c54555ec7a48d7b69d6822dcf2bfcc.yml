@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1655825675568
+modified: 1656020390899
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: |
@@ -28,6 +28,8 @@ contents: |
       description: Endpoints relacionados à negociações
     - name: Segments
       description: Endpoints relacionados à segmentos
+    - name: Integration
+      description: Endpoints relacionados à integrações
 
   paths:
     /v2/user/login/{orgId}:
@@ -798,6 +800,41 @@ contents: |
                   $ref: "#/components/schemas/Segment"
           "400":
             description: Invalid input
+    /v2/negotiation/{negotationId}/contract-text:
+      get:
+        security:
+          - bearerAuth: []
+        tags:
+          - Integration
+        summary: Buscar texto de documento de assinatura de audio
+        description: "Buscar texto de documento de assinatura de audio"
+        parameters:
+          - name: negotationId
+            in: path
+            description: ID do segmento
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: Uma string com o texto da assinatura por voz
+          "400":
+            description: Invalid input
+    /v2/negotiation/compare-text-voice:
+      post:
+        security:
+          - bearerAuth: []
+        tags:
+          - Integration
+        summary: Comparar texto com voz
+        description: "Comparar texto com voz"
+        requestBody:
+          $ref: "#/components/requestBodies/SpeechSignatureRB"
+        responses:
+          "200":
+            description: Acurácia de audio
+          "400":
+            description: Invalid input
   externalDocs:
     description: Find out more about Swagger
     url: http://swagger.io
@@ -810,6 +847,11 @@ contents: |
         scheme: bearer
         bearerFormat: JWT
     requestBodies:
+      SpeechSignatureRB:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SpeechSignatureRB"
       Guarantor:
         content:
           application/json:
@@ -866,6 +908,13 @@ contents: |
             schema:
               $ref: "#/components/schemas/SegmentRB"
     schemas:
+      SpeechSignatureRB:
+        type: object
+        properties:
+          gcs_uri:
+            type: string
+          text:
+            type: string
       SegmentRB:
         type: object
         properties:
@@ -1281,6 +1330,12 @@ contents: |
             type: object
           organization_ref:
             type: string
+          agreed_terms:
+            type: boolean
+          audio_signature_acurracy:
+            type: integer
+          audio_signature:
+            type: string
           created_at:
             type: string
           updated_at:
@@ -1325,6 +1380,12 @@ contents: |
           contacts_verification:
             type: object
           organization_ref:
+            type: string
+          agreed_terms:
+            type: boolean
+          audio_signature_acurracy:
+            type: integer
+          audio_signature:
             type: string
           created_at:
             type: string
@@ -1372,6 +1433,12 @@ contents: |
           contacts_verification:
             type: object
           organization_ref:
+            type: string
+          agreed_terms:
+            type: boolean
+          audio_signature_acurracy:
+            type: integer
+          audio_signature:
             type: string
           historical_item:
             $ref: "#/components/schemas/HistoricalItemSlim"
