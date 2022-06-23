@@ -1,0 +1,123 @@
+_id: req_930d4018b1574f62908655f346ea988e
+type: Request
+parentId: fld_918bf6ecea11437ea25a5d13271fb89b
+modified: 1655124670259
+created: 1651524903997
+url: "{{MODULE_URL}}/6271a8d6884dfb4d7b3d674a"
+name: CREATE
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"contract_number": "",
+    	"model_selected": {
+    		"id": "",
+    		"name": "",
+    		"segment": "",
+    		"quantity": 1
+    	},
+    	"business_rule": {
+    		"description": "TESTE",
+    		"type": "LOCACAO",
+    		"checklist_phases": [],
+    		"selected_commercial_definition": {
+    			"createdUser": {
+    				"id": "624d95cb7096d924cebf765a",
+    				"name": "teste123"
+    			},
+    			"description": "Preço padrão",
+    			"disabled": false,
+    			"instalationValue": 2000.0,
+    			"installmentValue": 2000.0,
+    			"numberOfInstallments": 36,
+    			"signalValue": 2000.0,
+    			"id": "62704e3ec7bdcabee5e8677e"
+    		},
+    		"commercial_definitions": [],
+    		"checklists": [
+    			{
+    				"name": "",
+    				"phase": "LOCACAO",
+    				"status": "",
+    				"questions": [
+    					{
+    						"uid": "62708c4eb166110eb78751f7",
+    						"label": "Quantos metros quadrados (m²) você imprime por mês?",
+    						"organizacao_ref": "blips-ativos-1649096498.4232771",
+    						"typeof": "TEXT",
+    						"upload_origin": [],
+    						"options": [
+    							{
+    								"value": "1",
+    								"label": "Até 100 (m²)."
+    							},
+    							{
+    								"value": "5",
+    								"label": "101 a 200 (m²)."
+    							},
+    							{
+    								"value": "6",
+    								"label": "Mais de 200 (m²)."
+    							}
+    						],
+    						"required": false,
+    						"mask": "NONE",
+    						"requirements": [],
+    						"terms": [],
+    						"sub_questions": [],
+    						"answer": ""
+    					}
+    				]
+    			}
+    		]
+    	},
+    	"technicians": {},
+    	"assets": [
+    		{
+    			"linked_assets": [
+    				{
+    					"id": "",
+    					"name": "",
+    					"serie_number": "",
+    					"start_date": "",
+    					"end_date": ""
+    				}
+    			],
+    			"assets_historical": [
+    				{
+    					"id": "",
+    					"name": "",
+    					"serie_number": "",
+    					"start_date": "",
+    					"end_date": ""
+    				}
+    			]
+    		}
+    	],
+    	"financial": {},
+    	"value": 2000.0,
+    	"shipping_value": 999.0,
+    	"signal": {},
+    	"installation": {},
+    	"guarantor": {}
+    }
+parameters: []
+headers:
+  - id: pair_b0cee00894a04d79b82d96bfaffe71bf
+    name: Authorization
+    value: Bearer {{TOKEN}}
+    description: ""
+  - name: Content-Type
+    value: application/json
+    id: pair_e52941ad0707484691a5b8dde0c72ebd
+authentication: {}
+metaSortKey: -1651524903997
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

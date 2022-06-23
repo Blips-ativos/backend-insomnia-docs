@@ -1,7 +1,7 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e382a47bab
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3ee1acfa5
-modified: 1654268846352
+modified: 1655334748466
 created: 1654258223116
 url: "{{ base_url }}/v2/user/login/{{ orgId }}"
 name: obter token
@@ -11,8 +11,8 @@ body:
   mimeType: application/json
   text: |-
     {
-      "email": "string",
-      "password": "string"
+        "email": "bernardo@blips.com.br",
+        "password": "asd123"
     }
 parameters: []
 headers:

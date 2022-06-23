@@ -1,21 +1,21 @@
-_id: req_451661576fcd4bb596d5449be6d73f82
+_id: req_2f6a21719d8546118890ba060994a2f4
 type: Request
-parentId: fld_8b0d169e8c4443ba82a92b479bc153ff
-modified: 1655825184154
-created: 1649942817055
-url: "{{MODULE_URL}}"
-name: ALL
+parentId: fld_918bf6ecea11437ea25a5d13271fb89b
+modified: 1654637099560
+created: 1652797787773
+url: "{{MODULE_URL}}/by-client/6271a8d6884dfb4d7b3d674a"
+name: ALL by client
 description: ""
 method: GET
 body: {}
 parameters: []
 headers:
-  - id: pair_3513ac7c3e614005ac433af33e4b5d60
+  - id: pair_4229dd5c55e94f9c8adb3fe0ad64bc75
     name: Authorization
-    value: Bearer {{ _.bearerToken }}
+    value: Bearer {{TOKEN}}
     description: ""
 authentication: {}
-metaSortKey: -1649942817055
+metaSortKey: -1651524904072
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

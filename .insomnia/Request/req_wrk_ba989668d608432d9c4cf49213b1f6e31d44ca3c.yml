@@ -1,55 +1,27 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e31d44ca3c
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
-modified: 1654811619749
+modified: 1655334687928
 created: 1654803644347
 url: "{{ base_url }}/v2/negotiation/{{ negotiationOrClientId }}"
 name: Atualização de negociação
 description: ""
-method: PUT
+method: PATCH
 body:
   mimeType: application/json
   text: |-
     {
-      "contract_number": "string",
-      "model_selected": [
-        null
-      ],
-      "contractor": {},
-      "checklists": [
-        {}
-      ],
-      "technicians": [
-        null
-      ],
-      "assets": [
-        null
-      ],
-      "financial": {},
-      "phase": {},
-      "value": 0,
-      "historical_status": [
-        null
-      ],
-      "company_users": [
-        null
-      ],
-      "shipping_value": 0,
-      "signal": {},
-      "document_analysis": [
-        null
-      ],
-      "installation": {},
-      "guarantor": {},
-      "contacts_verification": {},
-      "organization_ref": "string",
-      "historical_item": {
-        "type": "string",
-        "description": "string",
-        "justification": "string"
-      },
-      "created_at": "string",
-      "updated_at": "string"
+      "address": {
+    		"state": "MA",
+    		"city": "TIMON",
+    		"zip_code": "65631374",
+    		"st_ave": "RUA, OITO",
+    		"neighborhood": "PARQUE UNIAO"
+    	},
+    	"historical_item": {
+    		"type": "EDIT_BASIC_INFO",
+    		"description": "alteração de address"
+    	}
     }
 parameters: []
 headers:

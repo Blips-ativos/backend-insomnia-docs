@@ -1,0 +1,63 @@
+_id: req_f7b27db567c04c5b8bfde0bd9e0b4da4
+type: Request
+parentId: fld_918bf6ecea11437ea25a5d13271fb89b
+modified: 1654794427954
+created: 1653576220926
+url: "{{MODULE_URL}}/6287f7e065306957f86bad77/contractor"
+name: UPDATE contratante
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"businessData": {
+    		"address": {
+    			"city": "MANAUS",
+    			"neighborhood": "NOSSA SENHORA DAS GRAxAS",
+    			"stAve": "RUA, MAXIMO DOS SANTOS",
+    			"state": "AM",
+    			"zipCode": "69053480"
+    		},
+    		"cellphone": "93991522063",
+    		"companyName": "res",
+    		"document": "59315295000138",
+    		"name": "res",
+    		"responsible": [
+    			{
+    				"cellphone": "93991522063",
+    				"document": "60453436030",
+    				"name": "res"
+    			}
+    		],
+    		"statusSintegra": "",
+    		"typeof": "ME"
+    	},
+    	"document": "59315295000138",
+    	"email": "b0ce3e43f0@catdogmail.live",
+    	"id": "6271a8d6884dfb4d7b3d674a",
+    	"name": "res",
+    	"personalData": {
+    		"cellphone": "93991522063",
+    		"document": "60453436030",
+    		"name": "res"
+    	}
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_7a10ae0f9f6945bf8bbcc81f063b1285
+  - id: pair_cf6d797d0f6f4bbf844c27c91304cb91
+    name: Authorization
+    value: Bearer {{TOKEN}}
+    description: ""
+authentication: {}
+metaSortKey: -1651789641272.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,79 @@
+_id: req_4678ae367da041ac8712f65cdc568273
+type: Request
+parentId: fld_37e58615e1104709a7c7753a83995285
+modified: 1652874905607
+created: 1652728102403
+url: "{{BASE_URL}}/crm"
+name: crm
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"org_id": "624b373210c6fc7fcb4b7e0b",
+    	"url_webhook": "/crm/webhook",
+    	"payload": {
+    		"entrepreneur": {
+    			"business_data": {
+    				"address": {
+    					"city": "MANAUS",
+    					"neighborhood": "NOSSA SENHORA DAS GRACAS",
+    					"st_ave": "RUA, MAXIMO DOS SANTOS",
+    					"state": "AM",
+    					"zip_code": "69053480"
+    				},
+    				"company_name": "#teste",
+    				"document": "59315295000139",
+    				"name": "#teste#",
+    				"email": "teste2022@mail.com",
+    				"responsible": [
+    					{
+    						"document": "60453436031",
+    						"name": "res1",
+    						"cellphone": "93991522064"
+    					}
+    				],
+    				"status_sintegra": "",
+    				"cellphone": "93991522099",
+    				"typeof": "ME"
+    			},
+    			"business_type": "ME",
+    			"company_name": "#teste",
+    			"contacts": {},
+    			"created_at": "2022-05-03T22:12:25.00Z",
+    			"created_user": null,
+    			"document": "59315295000140",
+    			"historical": [],
+    			"id": "6271a8d6884dfb4d7b3d674a",
+    			"organizacao_ref": "blips-ativos-1649096498.4232771",
+    			"personal_data": {
+    				"document": "60453436031",
+    				"name": "junin",
+    				"telephone": "93991522064"
+    			},
+    			"segments": null,
+    			"situation": "",
+    			"social_network": {},
+    			"status": "EM_CADASTRO",
+    			"updated_at": [
+    				"2022-05-03T22:12:25.00Z"
+    			]
+    		},
+    		"operation_type": "pre_cadastro"
+    	}
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_be80e70bac184a1d9427ca8e4943250a
+authentication: {}
+metaSortKey: -1652728102403
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

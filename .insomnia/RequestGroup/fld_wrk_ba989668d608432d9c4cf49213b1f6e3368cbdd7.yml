@@ -1,10 +1,13 @@
 _id: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
 type: RequestGroup
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1654803644371
+modified: 1655232385945
 created: 1654803644371
 name: Negotiation
 description: Endpoints relacionados à negociações
-environment: {}
-environmentPropertyOrder: null
+environment:
+  negotiationOrClientId: 62a0e523b1c40498af2053eb
+environmentPropertyOrder:
+  "&":
+    - negotiationOrClientId
 metaSortKey: -1654803644371
