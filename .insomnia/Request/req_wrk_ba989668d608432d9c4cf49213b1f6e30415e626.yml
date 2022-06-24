@@ -1,0 +1,24 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e30415e626
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3f3798f81
+modified: 1656090095290
+created: 1656090095290
+url: "{{ base_url }}/v2/assets/models/{{ modelId }}"
+name: Buscar modelo
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1656090095290
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

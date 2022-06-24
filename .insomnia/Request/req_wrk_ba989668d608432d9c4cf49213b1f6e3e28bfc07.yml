@@ -1,0 +1,42 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3e28bfc07
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3f3798f81
+modified: 1656091727257
+created: 1656091727257
+url: "{{ base_url }}/v2/assets/models/{{ modelId }}/business-rules"
+name: Criar regra de negócio
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "description": "string",
+      "type": "string",
+      "analysis_queue": [
+        {
+          "name": "string",
+          "label": "string",
+          "integration": "string"
+        }
+      ],
+      "checklist_phases": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1656091727257
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

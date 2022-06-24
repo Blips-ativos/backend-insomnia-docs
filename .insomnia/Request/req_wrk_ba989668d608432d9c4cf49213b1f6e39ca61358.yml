@@ -1,0 +1,33 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e39ca61358
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3899e5920
+modified: 1656089033888
+created: 1656021040466
+url: "{{ base_url }}/v2/negotiation/compare-text-voice"
+name: Comparar texto com voz
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "gcs_uri": "string",
+      "text": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_c819c967dfc84b57a0d68981d929f1a5
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1656021040466
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

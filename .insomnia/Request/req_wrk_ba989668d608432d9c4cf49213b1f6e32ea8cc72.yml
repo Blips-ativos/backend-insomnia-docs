@@ -1,0 +1,37 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e32ea8cc72
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3f3798f81
+modified: 1656091727251
+created: 1656091727251
+url: "{{ base_url }}/v2/assets/models/{{ modelId }}/business-rules/{{
+  businessRuleType }}/commercial-definitions"
+name: Criar condição comercial
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "description": "string",
+      "signal_value": 0,
+      "installation_value": 0,
+      "number_of_installments": 0,
+      "installment_value": 0,
+      "jira_code": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1656091727251
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

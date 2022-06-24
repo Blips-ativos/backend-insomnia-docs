@@ -1,0 +1,24 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e36f2e567b
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3899e5920
+modified: 1656021062214
+created: 1656021040469
+url: "{{ base_url }}/v2/negotiation/{{ negotationId }}/contract-text"
+name: Buscar texto de documento de assinatura de audio
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1656021040469
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
