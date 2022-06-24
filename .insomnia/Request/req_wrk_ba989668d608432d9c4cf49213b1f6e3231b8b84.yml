@@ -1,8 +1,8 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e3231b8b84
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
-modified: 1655334027124
-created: 1654803644345
+modified: 1656092692666
+created: 1656092692666
 url: "{{ base_url }}/v2/negotiation/{{ negotiationOrClientId }}"
 name: Criação de negociação
 description: ""
@@ -32,6 +32,7 @@ body:
       "company_users": [
         null
       ],
+      "shipping": {},
       "shipping_value": 0,
       "signal": {},
       "document_analysis": [
@@ -41,6 +42,9 @@ body:
       "guarantor": {},
       "contacts_verification": {},
       "organization_ref": "string",
+      "agreed_terms": true,
+      "audio_signature_acurracy": 0,
+      "audio_signature": "string",
       "created_at": "string",
       "updated_at": "string"
     }
@@ -48,12 +52,11 @@ parameters: []
 headers:
   - name: Content-Type
     value: application/json
-    id: pair_bc37199591d14ad9ba8d70cf4ec33729
 authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1654803644345
+metaSortKey: -1656092692666
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

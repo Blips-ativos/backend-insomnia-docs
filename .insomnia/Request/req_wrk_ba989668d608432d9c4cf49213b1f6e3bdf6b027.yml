@@ -1,0 +1,44 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3bdf6b027
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3f3798f81
+modified: 1656092692622
+created: 1656092692622
+url: "{{ base_url }}/v2/assets/models/{{ modelId }}"
+name: Editar modelo
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "segment": "string",
+      "description": "string",
+      "name": "string",
+      "image": "string",
+      "manufacturer": "string",
+      "text_audio_contract": "string",
+      "terms": "string",
+      "specifications": {
+        "height": 0,
+        "length": 0,
+        "weight": 0,
+        "width": 0,
+        "shipment_invoice_value": 0
+      }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1656092692622
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

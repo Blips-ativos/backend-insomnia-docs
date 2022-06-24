@@ -1,13 +1,10 @@
 _id: fld_wrk_ba989668d608432d9c4cf49213b1f6e3ee1acfa5
 type: RequestGroup
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1654259510839
-created: 1654258223122
+modified: 1656092692846
+created: 1656092692846
 name: Authentication
 description: Endpoints relacionados à autenticação
-environment:
-  orgId: 624b373210c6fc7fcb4b7e0b
-environmentPropertyOrder:
-  "&":
-    - orgId
-metaSortKey: -1654258223122
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1656092692846

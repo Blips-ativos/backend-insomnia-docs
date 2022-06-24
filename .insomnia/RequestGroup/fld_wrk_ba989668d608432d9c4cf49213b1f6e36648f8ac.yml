@@ -1,10 +1,10 @@
 _id: fld_wrk_ba989668d608432d9c4cf49213b1f6e36648f8ac
 type: RequestGroup
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1655335077117
-created: 1655335077117
+modified: 1656092692830
+created: 1656092692830
 name: Segments
 description: Endpoints relacionados à segmentos
 environment: {}
 environmentPropertyOrder: null
-metaSortKey: -1655335077117
+metaSortKey: -1656092692830

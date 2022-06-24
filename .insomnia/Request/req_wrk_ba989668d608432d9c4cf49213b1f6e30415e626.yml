@@ -1,12 +1,12 @@
-_id: req_wrk_ba989668d608432d9c4cf49213b1f6e335e25193
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e30415e626
 type: Request
-parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e39a1fc173
-modified: 1656092692674
-created: 1656092692674
-url: "{{ base_url }}/v2/adm/questions/{{ questionId }}/disabled"
-name: desabilitar pergunta de checklist
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3f3798f81
+modified: 1656092692624
+created: 1656092692624
+url: "{{ base_url }}/v2/assets/models/{{ modelId }}"
+name: Buscar modelo
 description: ""
-method: PUT
+method: GET
 body: {}
 parameters: []
 headers: []
@@ -14,7 +14,7 @@ authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1656092692674
+metaSortKey: -1656092692624
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

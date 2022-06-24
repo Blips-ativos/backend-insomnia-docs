@@ -1,10 +1,10 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e3870c48d0
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
-modified: 1655232530367
-created: 1654803644349
+modified: 1656092692671
+created: 1656092692671
 url: "{{ base_url }}/v2/negotiation/{{ negotiationOrClientId }}"
-name: Negociação com id ou Negociações por id de cliente
+name: Negociação com id
 description: ""
 method: GET
 body: {}
@@ -14,7 +14,7 @@ authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1654803644349
+metaSortKey: -1656092692671
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

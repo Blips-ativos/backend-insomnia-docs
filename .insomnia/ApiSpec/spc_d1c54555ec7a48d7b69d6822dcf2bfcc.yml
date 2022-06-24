@@ -1,11 +1,12 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1656020390899
+modified: 1656092692863
 created: 1650311385059
 fileName: BLIPS DOCS
-contents: |
+contents: >
   openapi: 3.0.0
+
   info:
     description: ""
     version: 2.0.0
@@ -30,6 +31,8 @@ contents: |
       description: Endpoints relacionados à segmentos
     - name: Integration
       description: Endpoints relacionados à integrações
+    - name: Models
+      description: Endpoints relacionados à modelos
 
   paths:
     /v2/user/login/{orgId}:
@@ -835,6 +838,420 @@ contents: |
             description: Acurácia de audio
           "400":
             description: Invalid input
+    /v2/assets/models:
+      get:
+        security:
+          - bearerAuth: []
+        tags:
+          - Models
+        summary: Listar modelos
+        description: "Listar modelos"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Model"
+          "400":
+            description: Invalid input
+      post:
+        security:
+          - bearerAuth: []
+        tags:
+          - Models
+        summary: Criar novo modelo
+        description: "Criar novo modelo"
+        requestBody:
+          $ref: "#/components/requestBodies/ModelRB"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Model"
+          "400":
+            description: Invalid input
+    /v2/assets/models/{modelId}:
+      get:
+        security:
+          - bearerAuth: []
+        tags:
+          - Models
+        summary: Buscar modelo
+        description: "Buscar modelo"
+        parameters:
+          - name: modelId
+            in: path
+            description: ID do modelo
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Model"
+          "400":
+            description: Invalid input
+      put:
+        security:
+          - bearerAuth: []
+        tags:
+          - Models
+        summary: Editar modelo
+        description: "Editar modelo"
+        parameters:
+          - name: modelId
+            in: path
+            description: ID do modelo
+            required: true
+            schema:
+              type: string
+        requestBody:
+          $ref: "#/components/requestBodies/ModelRB"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Model"
+          "400":
+            description: Invalid input
+      delete:
+        security:
+          - bearerAuth: []
+        tags:
+          - Models
+        summary: Desativar modelo
+        description: "Desativar modelo"
+        parameters:
+          - name: modelId
+            in: path
+            description: ID do modelo
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Model"
+          "400":
+            description: Invalid input
+    /v2/assets/models/resume/{orgId}:
+      get:
+        tags:
+          - Models
+        summary: Listagem pública de modelos
+        description: "Listagem pública de modelos"
+        parameters:
+          - name: orgId
+            in: path
+            description: ID da organização
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      items:
+                        $ref: "#/components/schemas/Model"
+                    pagination:
+                      type: object
+                      properties:
+                        current:
+                          type: integer
+                        maxPage:
+                          type: integer
+                        pageSize:
+                          type: integer
+                        total:
+                          type: integer
+          "400":
+            description: Invalid input
+    /v2/assets/models/{modelId}/business-rules:
+      post:
+        security:
+          - bearerAuth: []
+        tags:
+          - Models
+        summary: Criar regra de negócio
+        description: "Criar regra de negócio"
+        parameters:
+          - name: modelId
+            in: path
+            description: ID do modelo
+            required: true
+            schema:
+              type: string
+        requestBody:
+          $ref: "#/components/requestBodies/BusinessRuleRB"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Model"
+          "400":
+            description: Invalid input
+    /v2/assets/models/{modelId}/business-rules/{businessRuleType}:
+      patch:
+        security:
+          - bearerAuth: []
+        tags:
+          - Models
+        summary: Editar regra de negócio
+        description: "Editar regra de negócio"
+        parameters:
+          - name: modelId
+            in: path
+            description: ID do modelo
+            required: true
+            schema:
+              type: string
+          - name: businessRuleType
+            in: path
+            description: Tipo da regra de negócio
+            required: true
+            schema:
+              type: string
+              enum:
+              - LOCACAO
+              - VENDA
+              - SHOWROOM
+        requestBody:
+          $ref: "#/components/requestBodies/BusinessRuleRB"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Model"
+          "400":
+            description: Invalid input
+    /v2/assets/models/{modelId}/business-rules/{businessRuleType}/checklist/{checklistPhase}:
+      put:
+        security:
+          - bearerAuth: []
+        tags:
+          - Models
+        summary: Criar novo checklist
+        description: "Criar novo checklist"
+        parameters:
+          - name: modelId
+            in: path
+            description: ID do modelo
+            required: true
+            schema:
+              type: string
+          - name: businessRuleType
+            in: path
+            description: Tipo da regra de negócio
+            required: true
+            schema:
+              type: string
+              enum:
+              - LOCACAO
+              - VENDA
+              - SHOWROOM
+          - name: checklistPhase
+            in: path
+            description: fase do checklist
+            required: true
+            schema:
+              type: string
+              enum:
+              - LOCACAO
+              - VISTORIA
+              - INSTALACAO
+              - INFO_COMERCIAIS
+        requestBody:
+          $ref: "#/components/requestBodies/ChecklistRB"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Model"
+          "400":
+            description: Invalid input
+    /v2/assets/models/{modelId}/business-rules/{businessRuleType}/commercial-definitions:
+      post:
+        security:
+          - bearerAuth: []
+        tags:
+          - Models
+        summary: Criar condição comercial
+        description: "Criar condição comercial"
+        parameters:
+          - name: modelId
+            in: path
+            description: ID do modelo
+            required: true
+            schema:
+              type: string
+          - name: businessRuleType
+            in: path
+            description: Tipo da regra de negócio
+            required: true
+            schema:
+              type: string
+              enum:
+              - LOCACAO
+              - VENDA
+              - SHOWROOM
+        requestBody:
+          $ref: "#/components/requestBodies/CommercialDefinitionRB"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Model"
+          "400":
+            description: Invalid input
+    /v2/assets/models/{modelId}/business-rules/{businessRuleType}/commercial-definitions/{commercialDefinitionId}/disable:
+      patch:
+        security:
+          - bearerAuth: []
+        tags:
+          - Models
+        summary: Desabilitar condição comercial
+        description: "Desabilitar condição comercial"
+        parameters:
+          - name: modelId
+            in: path
+            description: ID do modelo
+            required: true
+            schema:
+              type: string
+          - name: businessRuleType
+            in: path
+            description: Tipo da regra de negócio
+            required: true
+            schema:
+              type: string
+              enum:
+              - LOCACAO
+              - VENDA
+              - SHOWROOM
+          - name: commercialDefinitionId
+            in: path
+            description: ID da condição comercial
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Segment"
+             
+          "400":
+            description: Invalid input
+    /v2/assets/models/{modelId}/business-rules/{businessRuleType}/commercial-definitions/{commercialDefinitionId}/enable:
+      patch:
+        security:
+          - bearerAuth: []
+        tags:
+          - Models
+        summary: Habilitar condição comercial
+        description: "Habilitar condição comercial"
+        parameters:
+          - name: modelId
+            in: path
+            description: ID do modelo
+            required: true
+            schema:
+              type: string
+          - name: businessRuleType
+            in: path
+            description: Tipo da regra de negócio
+            required: true
+            schema:
+              type: string
+              enum:
+              - LOCACAO
+              - VENDA
+              - SHOWROOM
+          - name: commercialDefinitionId
+            in: path
+            description: ID da condição comercial
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Segment"
+             
+          "400":
+            description: Invalid input
+    /v2/assets/models/{modelId}/business-rules/{businessRuleType}/commercial-definitions/{commercialDefinitionId}:
+      put:
+        security:
+          - bearerAuth: []
+        tags:
+          - Models
+        summary: Editar condição comercial
+        description: "Editar condição comercial"
+        parameters:
+          - name: modelId
+            in: path
+            description: ID do modelo
+            required: true
+            schema:
+              type: string
+          - name: businessRuleType
+            in: path
+            description: Tipo da regra de negócio
+            required: true
+            schema:
+              type: string
+              enum:
+              - LOCACAO
+              - VENDA
+              - SHOWROOM
+          - name: commercialDefinitionId
+            in: path
+            description: ID da condição comercial
+            required: true
+            schema:
+              type: string
+        requestBody:
+          $ref: "#/components/requestBodies/CommercialDefinitionRB"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Model"
+          "400":
+            description: Invalid input
   externalDocs:
     description: Find out more about Swagger
     url: http://swagger.io
@@ -847,6 +1264,26 @@ contents: |
         scheme: bearer
         bearerFormat: JWT
     requestBodies:
+      BusinessRuleRB:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BusinessRuleRB"
+      CommercialDefinitionRB:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CommercialDefinitionRB"
+      ChecklistRB:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ChecklistRB"
+      ModelRB:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ModelRB"
       SpeechSignatureRB:
         content:
           application/json:
@@ -908,6 +1345,129 @@ contents: |
             schema:
               $ref: "#/components/schemas/SegmentRB"
     schemas:
+      BusinessRuleRB:
+        type: object
+        properties:
+          description:
+            type: string
+          type:
+            type: string
+            enum:
+              - LOCACAO
+              - VENDA
+              - SHOWROOM
+          analysis_queue:
+            type: array
+            items:
+              type: object
+              properties:
+                name:
+                  type: string
+                label:
+                  type: string
+                integration:
+                  type: string
+          checklist_phases:
+            type: array
+            items:
+              type: string
+              enum:
+                - LOCACAO
+                - VISTORIA
+                - INSTALACAO
+                - INFO_COMERCIAIS
+      CommercialDefinitionRB:
+        type: object
+        properties:
+          description:
+            type: string
+          signal_value:
+            type: number
+          installation_value:
+            type: number
+          number_of_installments:
+            type: integer
+          installment_value:
+            type: number
+          jira_code:
+            type: string
+      ChecklistRB:
+        type: object
+        properties:
+          name:
+            type: string
+          phase:
+            type: string
+          status:
+            type: string
+          questions:
+            type: array
+            items:
+              type: string
+      ModelRB:
+        type: object
+        properties:
+          segment:
+            type: string
+          description:
+            type: string
+          name:
+            type: string
+          image:
+            type: string
+          manufacturer:
+            type: string
+          text_audio_contract:
+            type: string
+          terms:
+            type: string
+          specifications:
+            type: object
+            properties:
+              height:
+                type: integer
+              length:
+                type: integer
+              weight:
+                type: integer
+              width:
+                type: integer
+              shipment_invoice_value:
+                type: number
+      Model:
+        type: object
+        properties:
+          id:
+            type: string
+          segment:
+            type: string
+          description:
+            type: string
+          name:
+            type: string
+          image:
+            type: string
+          manufacturer:
+            type: string
+          text_audio_contract:
+            type: string
+          terms:
+            type: string
+          specifications:
+            type: object
+            properties:
+              height:
+                type: integer
+              length:
+                type: integer
+              weight:
+                type: integer
+              width:
+                type: integer
+              shipment_invoice_value:
+                type: number
+          historical:
+            $ref: "#/components/schemas/HistoricalItem"
       SpeechSignatureRB:
         type: object
         properties:
@@ -1058,6 +1618,46 @@ contents: |
             type: string
           justification: 
             type: string
+      HistoricalItem:
+        type: object
+        properties:
+          id: 
+            type: string
+          date:
+            type: string
+          type: 
+            type: string
+            enum:
+              - EDIT_BASIC_INFO
+              - EDIT_BANK_DETAILS
+              - NOTE
+              - SYSTEM
+              - CHATBOT
+              - CREATE_CONTRATC_TECHNICIAN
+              - TECHNICIAN_CHANGE
+              - CHANGE_INSTALLATION_DATE
+              - ACTIVE_TECHNICIAN
+              - INACTIVE_TECHNICIAN
+              - SETTINGS
+              - ACTIVE_CANCELLED_ENTREPRENEUR
+              - TRUST_UNLOCK
+              - EDIT_PERSONAL_DATA
+              - EDIT_BUSINESS_DATA
+              - CUSTOMER_SERVICE
+              - ANALYSIS_APROVED
+              - ANALYSIS_REPROVED
+              - SHIPPING
+          description: 
+            type: string
+          justification: 
+            type: string
+          backoffice_user:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
       Address:
         type: object
         required:

@@ -1,8 +1,8 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e31f27073d
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e39a1fc173
-modified: 1654794409388
-created: 1654262299012
+modified: 1656092692689
+created: 1656092692689
 url: "{{ base_url }}/v2/adm/questions"
 name: criar pergunta de checklist
 description: ""
@@ -12,7 +12,7 @@ body:
   text: |-
     {
       "label": "string",
-      "typeof": "OPTION",
+      "typeof": "string",
       "options": {
         "value": "string",
         "label": "string",
@@ -37,14 +37,14 @@ body:
           "label": "string",
           "typeof": "TEXT",
           "uploadOrigin": [
-            "CAMERA"
+            "string"
           ],
           "options": {
             "value": "string",
             "label": "string",
             "description": "string"
           },
-          "required": false,
+          "required": true,
           "mask": "string",
           "requirements": [
             "string"
@@ -66,12 +66,11 @@ parameters: []
 headers:
   - name: Content-Type
     value: application/json
-    id: pair_8d512b58972a46129428fbc3a146fa7f
 authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1654262299012
+metaSortKey: -1656092692689
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

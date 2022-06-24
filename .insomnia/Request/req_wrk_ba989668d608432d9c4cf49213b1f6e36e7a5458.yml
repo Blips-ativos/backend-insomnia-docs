@@ -1,10 +1,11 @@
-_id: req_wrk_ba989668d608432d9c4cf49213b1f6e375c3738e
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e36e7a5458
 type: Request
-parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e36648f8ac
-modified: 1656092692635
-created: 1656092692635
-url: "{{ base_url }}/V2/adm/segments/{{ segmentId }}"
-name: Editar segmento
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3f3798f81
+modified: 1656092692612
+created: 1656092692612
+url: "{{ base_url }}/v2/assets/models/{{ modelId }}/business-rules/{{
+  businessRuleType }}/checklist/{{ checklistPhase }}"
+name: Criar novo checklist
 description: ""
 method: PUT
 body:
@@ -12,7 +13,11 @@ body:
   text: |-
     {
       "name": "string",
-      "description": "string"
+      "phase": "string",
+      "status": "string",
+      "questions": [
+        "string"
+      ]
     }
 parameters: []
 headers:
@@ -22,7 +27,7 @@ authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1656092692635
+metaSortKey: -1656092692612
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

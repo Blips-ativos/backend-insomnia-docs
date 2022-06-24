@@ -1,10 +1,10 @@
-_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3d3d1ac47
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e36f2e567b
 type: Request
-parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e39a1fc173
-modified: 1656092692683
-created: 1656092692683
-url: "{{ base_url }}/v2/adm/questions/disabled"
-name: buscar perguntas de checklist desabilitadas
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3899e5920
+modified: 1656092692631
+created: 1656092692631
+url: "{{ base_url }}/v2/negotiation/{{ negotationId }}/contract-text"
+name: Buscar texto de documento de assinatura de audio
 description: ""
 method: GET
 body: {}
@@ -14,7 +14,7 @@ authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1656092692683
+metaSortKey: -1656092692631
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

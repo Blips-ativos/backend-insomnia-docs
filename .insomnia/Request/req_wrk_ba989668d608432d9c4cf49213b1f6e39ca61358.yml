@@ -1,18 +1,18 @@
-_id: req_wrk_ba989668d608432d9c4cf49213b1f6e38af5dbe3
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e39ca61358
 type: Request
-parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e36648f8ac
-modified: 1656092692637
-created: 1656092692637
-url: "{{ base_url }}/v2/adm/segments"
-name: criar pergunta de checklist
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3899e5920
+modified: 1656092692629
+created: 1656092692629
+url: "{{ base_url }}/v2/negotiation/compare-text-voice"
+name: Comparar texto com voz
 description: ""
 method: POST
 body:
   mimeType: application/json
   text: |-
     {
-      "name": "string",
-      "description": "string"
+      "gcs_uri": "string",
+      "text": "string"
     }
 parameters: []
 headers:
@@ -22,7 +22,7 @@ authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1656092692637
+metaSortKey: -1656092692629
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

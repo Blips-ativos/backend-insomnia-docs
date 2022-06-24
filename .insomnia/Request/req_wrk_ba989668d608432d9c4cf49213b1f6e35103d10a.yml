@@ -1,0 +1,45 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e35103d10a
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3f3798f81
+modified: 1656092693377
+created: 1656092692626
+url: "{{ base_url }}/v2/assets/models"
+name: Criar novo modelo
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "segment": "string",
+      "description": "string",
+      "name": "string",
+      "image": "string",
+      "manufacturer": "string",
+      "text_audio_contract": "string",
+      "terms": "string",
+      "specifications": {
+        "height": 0,
+        "length": 0,
+        "weight": 0,
+        "width": 0,
+        "shipment_invoice_value": 0
+      }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_9ec6efa945e94e0ea85f8dbe96050111
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1656092692626
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
