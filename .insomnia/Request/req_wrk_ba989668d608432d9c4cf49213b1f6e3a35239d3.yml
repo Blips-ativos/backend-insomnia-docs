@@ -1,8 +1,8 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e3a35239d3
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3f3798f81
-modified: 1656090095281
-created: 1656090095281
+modified: 1656092692620
+created: 1656092692620
 url: "{{ base_url }}/v2/assets/models/{{ modelId }}"
 name: Desativar modelo
 description: ""
@@ -14,7 +14,7 @@ authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1656090095281
+metaSortKey: -1656092692620
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

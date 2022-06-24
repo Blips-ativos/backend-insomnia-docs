@@ -1,23 +1,29 @@
-_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3033161f4
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3ce8604e2
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3f3798f81
-modified: 1656092692604
-created: 1656092692604
+modified: 1656092692614
+created: 1656092692614
 url: "{{ base_url }}/v2/assets/models/{{ modelId }}/business-rules/{{
-  businessRuleType }}/commercial-definitions/{{ commercialDefinitionId }}"
-name: Editar condição comercial
+  businessRuleType }}"
+name: Editar regra de negócio
 description: ""
-method: PUT
+method: PATCH
 body:
   mimeType: application/json
   text: |-
     {
       "description": "string",
-      "signal_value": 0,
-      "installation_value": 0,
-      "number_of_installments": 0,
-      "installment_value": 0,
-      "jira_code": "string"
+      "type": "string",
+      "analysis_queue": [
+        {
+          "name": "string",
+          "label": "string",
+          "integration": "string"
+        }
+      ],
+      "checklist_phases": [
+        "string"
+      ]
     }
 parameters: []
 headers:
@@ -27,7 +33,7 @@ authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1656092692604
+metaSortKey: -1656092692614
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

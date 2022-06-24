@@ -1,8 +1,8 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e3bdf6b027
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3f3798f81
-modified: 1656090095284
-created: 1656090095284
+modified: 1656092692622
+created: 1656092692622
 url: "{{ base_url }}/v2/assets/models/{{ modelId }}"
 name: Editar modelo
 description: ""
@@ -34,7 +34,7 @@ authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1656090095284
+metaSortKey: -1656092692622
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

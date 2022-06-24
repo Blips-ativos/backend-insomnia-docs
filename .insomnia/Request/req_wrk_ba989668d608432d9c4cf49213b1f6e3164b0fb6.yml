@@ -1,8 +1,8 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e3164b0fb6
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3ee1acfa5
-modified: 1655334722252
-created: 1654259262509
+modified: 1656092692691
+created: 1656092692691
 url: "{{ base_url }}/v2/user/refresh-token"
 name: refresh token
 description: ""
@@ -17,12 +17,11 @@ parameters: []
 headers:
   - name: Content-Type
     value: application/json
-    id: pair_ad347d500e994781ad9f192e90e5a21a
 authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1654259262509
+metaSortKey: -1656092692691
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

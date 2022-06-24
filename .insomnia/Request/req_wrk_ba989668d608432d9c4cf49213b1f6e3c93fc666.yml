@@ -1,8 +1,8 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e3c93fc666
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3f3798f81
-modified: 1656092002371
-created: 1656092002371
+modified: 1656092692618
+created: 1656092692618
 url: "{{ base_url }}/v2/assets/models/resume/{{ orgId }}"
 name: Listagem pública de modelos
 description: ""
@@ -10,11 +10,8 @@ method: GET
 body: {}
 parameters: []
 headers: []
-authentication:
-  type: bearer
-  token: "{{bearerToken}}"
-  prefix: ""
-metaSortKey: -1656092002371
+authentication: {}
+metaSortKey: -1656092692618
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

@@ -1,8 +1,8 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e3ed251ed5
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e39a1fc173
-modified: 1655825675219
-created: 1655825675219
+modified: 1656092692676
+created: 1656092692676
 url: "{{ base_url }}/v2/adm/questions/{{ questionId }}"
 name: Deletar pergunta de checklist
 description: ""
@@ -14,7 +14,7 @@ authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1655825675219
+metaSortKey: -1656092692676
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

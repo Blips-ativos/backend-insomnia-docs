@@ -1,10 +1,10 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e32aa26a63
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
-modified: 1655323120471
-created: 1654814124170
+modified: 1656092692649
+created: 1656092692649
 url: "{{ base_url }}/v2/negotiation/{{ negotiationId }}/guarantor"
-name: Buscar fiador
+name: Criar fiador
 description: ""
 method: POST
 body:
@@ -42,12 +42,11 @@ parameters: []
 headers:
   - name: Content-Type
     value: application/json
-    id: pair_357389e0b9634dd1956067b85a2d11a9
 authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1654814124170
+metaSortKey: -1656092692649
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
