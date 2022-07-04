@@ -1,10 +1,11 @@
-_id: req_wrk_ba989668d608432d9c4cf49213b1f6e345d878ff
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3461ec7e3
 type: Request
-parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
-modified: 1656092692665
-created: 1656092692665
-url: "{{ base_url }}/v2/negotiation/by-organization"
-name: Negociações por organização
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3899e5920
+modified: 1656962399166
+created: 1656962399166
+url: "{{ base_url }}/v2/negotiation/document-analysis/{{ analysisId
+  }}/async/facematch"
+name: Solicitar analise de Facematch
 description: ""
 method: GET
 body: {}
@@ -14,7 +15,7 @@ authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1656092692665
+metaSortKey: -1656962399166
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

@@ -1,0 +1,41 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3a6689cca
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
+modified: 1656962403980
+created: 1656962399576
+url: "{{ base_url }}/v2/negotiation/by-client/{{ clientId
+  }}?current=1&pageSize=10&sortBy=createdAt&sortDirection=DESC"
+name: Negociações por cliente
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: current
+    disabled: true
+    value: "1"
+    id: pair_56334c7d2bdb493a8fe9dbaa825a2ae0
+  - name: pageSize
+    disabled: true
+    value: "10"
+    id: pair_13ef02a3b6604e6e84caea9046ce99a2
+  - name: sortBy
+    disabled: true
+    value: createdAt
+    id: pair_b3455496af97428eb3494e5a2ddcc1dc
+  - name: sortDirection
+    disabled: true
+    value: DESC
+    id: pair_1e436cb58fb84a588ad88b9816d3c8f6
+headers: []
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1656962399576
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
