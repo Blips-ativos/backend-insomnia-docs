@@ -1,7 +1,7 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e35103d10a
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3f3798f81
-modified: 1656092693377
+modified: 1656944648551
 created: 1656092692626
 url: "{{ base_url }}/v2/assets/models"
 name: Criar novo modelo
