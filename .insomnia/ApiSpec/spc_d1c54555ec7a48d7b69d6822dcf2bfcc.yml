@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1656944657672
+modified: 1656960803940
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >
@@ -1252,7 +1252,7 @@ contents: >
                   $ref: "#/components/schemas/Model"
           "400":
             description: Invalid input
-    /v2/negotiation/document-analysis/{analysisId}/ocr/async:
+    /v2/negotiation/document-analysis/{analysisId}/async/ocr-analysis:
       get:
         security:
           - bearerAuth: []
@@ -1272,7 +1272,7 @@ contents: >
             description: Solicitação de análise recebida.
           "400":
             description: erro em caso de falta de documentFront / documentBack
-    /v2/negotiation/document-analysis/{analysisId}/facematch/async:
+    /v2/negotiation/document-analysis/{analysisId}/async/facematch:
       get:
         security:
           - bearerAuth: []
