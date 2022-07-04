@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1656960803940
+modified: 1656962400374
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >
@@ -343,7 +343,7 @@ contents: >
              
           "400":
             description: Invalid input
-    /v2/negotiation/by-organization:
+    /v2/negotiation/by-organization?current=1&pageSize=10&sortBy=createdAt&sortDirection=DESC:
       get:
         security:
           - bearerAuth: []
@@ -351,6 +351,31 @@ contents: >
           - Negotiation
         summary: Negociações por organização
         description: "Negociações por organização"
+        parameters:
+          - name: current
+            in: query
+            description: página atual
+            schema:
+              type: integer
+              default: 1
+          - name: pageSize
+            in: query
+            description: tamanho da página
+            schema:
+              type: integer
+              default: 10
+          - name: sortBy
+            in: query
+            description: ordenar por
+            schema:
+              type: string
+              default: createdAt
+          - name: sortDirection
+            in: query
+            description: ordenação DESC / ASC
+            schema:
+              type: string
+              default: DESC
         responses:
           "200":
             description: successful operation
@@ -374,7 +399,7 @@ contents: >
                           type: integer
           "400":
             description: Invalid input
-    /v2/negotiation/by-client/{clientId}:
+    /v2/negotiation/by-client/{clientId}?current=1&pageSize=10&sortBy=createdAt&sortDirection=DESC:
       get:
         security:
           - bearerAuth: []
@@ -389,6 +414,30 @@ contents: >
             required: true
             schema:
               type: string
+          - name: current
+            in: query
+            description: página atual
+            schema:
+              type: integer
+              default: 1
+          - name: pageSize
+            in: query
+            description: tamanho da página
+            schema:
+              type: integer
+              default: 10
+          - name: sortBy
+            in: query
+            description: ordenar por
+            schema:
+              type: string
+              default: createdAt
+          - name: sortDirection
+            in: query
+            description: ordenação DESC / ASC
+            schema:
+              type: string
+              default: DESC
         responses:
           "200":
             description: successful operation

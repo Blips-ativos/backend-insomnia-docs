@@ -1,0 +1,42 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3a98717d0
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
+modified: 1656962405963
+created: 1656962399667
+url: "{{ base_url
+  }}/v2/negotiation/by-organization?current=1&pageSize=10&sortBy=createdAt&sort\
+  Direction=DESC"
+name: Negociações por organização
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: current
+    disabled: true
+    value: "1"
+    id: pair_c65a51698f2a488dbf076d9d26d1111f
+  - name: pageSize
+    disabled: true
+    value: "10"
+    id: pair_6225894b4be44cb1b1333cf50235cbdf
+  - name: sortBy
+    disabled: true
+    value: createdAt
+    id: pair_b6bfcc133f5b4936851b300970cf1879
+  - name: sortDirection
+    disabled: true
+    value: DESC
+    id: pair_ef21a31ef7c440da94e3007ebd50a406
+headers: []
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1656962399667
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
