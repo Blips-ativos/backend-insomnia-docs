@@ -1,0 +1,24 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3d465c879
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3e6d03272
+modified: 1657407727320
+created: 1657407723418
+url: "{{ base_url }}/v2/technician/{{ technicianId }}"
+name: Detalhamento de técnico da organização por id
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1657407723418
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
