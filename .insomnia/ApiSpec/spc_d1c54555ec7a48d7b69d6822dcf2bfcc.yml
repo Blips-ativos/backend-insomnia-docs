@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1657407723844
+modified: 1657718762103
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >
@@ -1423,6 +1423,25 @@ contents: >
                   $ref: "#/components/schemas/Technician"
           "400":
             description: Invalid input
+    /v2/technician:
+      post:
+        security:
+          - bearerAuth: []
+        tags:
+          - Technician
+        summary: Criar técnico
+        description: "Criar técnico"
+        requestBody:
+          $ref: "#/components/requestBodies/TechnicianRB"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Technician"
+          "400":
+            description: Invalid input
   externalDocs:
     description: Find out more about Swagger
     url: http://swagger.io
@@ -1435,6 +1454,11 @@ contents: >
         scheme: bearer
         bearerFormat: JWT
     requestBodies:
+      TechnicianRB:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TechnicianRB"
       BusinessRuleRB:
         content:
           application/json:
@@ -1516,6 +1540,25 @@ contents: >
             schema:
               $ref: "#/components/schemas/SegmentRB"
     schemas:
+      TechnicianRB:
+        type: object
+        properties:
+          technician_type:
+            type: string
+          identifier_code:
+            type: string
+          bank_data:
+            type: string
+          distance_range:
+            type: integer
+            default: 150
+          phase:
+            type: object
+            properties:
+              name:
+                type: string
+              is_reproved:
+                type: boolean
       Technician:
         type: object
         properties:
