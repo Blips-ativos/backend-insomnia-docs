@@ -1,12 +1,11 @@
-_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3a98717d0
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e37ca5073c
 type: Request
-parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
-modified: 1657407724302
-created: 1656962399667
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3e6d03272
+modified: 1657718762577
+created: 1657407723422
 url: "{{ base_url
-  }}/v2/negotiation/by-organization?current=1&pageSize=10&sortBy=createdAt&sort\
-  Direction=DESC"
-name: Negociações por organização
+  }}/v2/technician?current=1&pageSize=10&sortBy=createdAt&sortDirection=DESC"
+name: Lista de tecnicos da organização
 description: ""
 method: GET
 body: {}
@@ -14,25 +13,25 @@ parameters:
   - name: current
     disabled: true
     value: "1"
-    id: pair_c65a51698f2a488dbf076d9d26d1111f
+    id: pair_1e6c983d6ff24421a63406040502b490
   - name: pageSize
     disabled: true
     value: "10"
-    id: pair_6225894b4be44cb1b1333cf50235cbdf
+    id: pair_c51e3d82e5a547bda9d8ac14deb700f0
   - name: sortBy
     disabled: true
     value: createdAt
-    id: pair_b6bfcc133f5b4936851b300970cf1879
+    id: pair_9c2133bfbabd4b6795fdc10877095854
   - name: sortDirection
     disabled: true
     value: DESC
-    id: pair_ef21a31ef7c440da94e3007ebd50a406
+    id: pair_0e64457ae08d4afd924ec9c5a70e934c
 headers: []
 authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1656962399667
+metaSortKey: -1657407723422
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

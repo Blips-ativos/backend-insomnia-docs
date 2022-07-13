@@ -1,0 +1,38 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e34852bb21
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3e6d03272
+modified: 1657718761263
+created: 1657718761263
+url: "{{ base_url }}/v2/technician"
+name: Criar técnico
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "technician_type": "string",
+      "identifier_code": "string",
+      "bank_data": "string",
+      "distance_range": 150,
+      "phase": {
+        "name": "string",
+        "is_reproved": true
+      }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1657718761263
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
