@@ -1,8 +1,8 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e34b1d87bf
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3899e5920
-modified: 1656962399170
-created: 1656962399170
+modified: 1657837441932
+created: 1657837428482
 url: "{{ base_url }}/v2/negotiation/document-analysis/{{ analysisId
   }}/async/ocr-analysis"
 name: Solicitar analise de OCR
@@ -15,7 +15,7 @@ authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1656962399170
+metaSortKey: -1657837428482
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

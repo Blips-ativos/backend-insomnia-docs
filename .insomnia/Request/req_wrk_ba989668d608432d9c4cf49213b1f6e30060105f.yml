@@ -1,0 +1,35 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e30060105f
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3899e5920
+modified: 1657837442966
+created: 1657837428467
+url: "{{ base_url }}/v2/negotiation/document-analysis/{{ analysisId }}/async/resend"
+name: Fazer reenvio de OCR / Facematch
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "documentFront": "string",
+      "documentBack": "string",
+      "phaseName": "OCR",
+      "selfie": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_ac8e4757c5fb4da9977a79cc69bfce61
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1657837428467
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

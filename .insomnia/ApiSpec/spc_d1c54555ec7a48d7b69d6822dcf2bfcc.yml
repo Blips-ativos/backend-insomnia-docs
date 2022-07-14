@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1657718762103
+modified: 1657837429301
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >
@@ -1338,6 +1338,48 @@ contents: >
             required: true
             schema:
               type: string
+        responses:
+          "200":
+            description: Solicitação de análise recebida.
+          "400":
+            description: erro em caso de falta de documentFront / documentBack / selfie
+    /v2/negotiation/document-analysis/{analysisId}/async/resend:
+      get:
+        security:
+          - bearerAuth: []
+        tags:
+          - Integration
+        summary: Fazer reenvio de OCR / Facematch
+        description: "Fazer reenvio de OCR / Facematch"
+        parameters:
+          - name: analysisId
+            in: path
+            description: ID de análise
+            required: true
+            schema:
+              type: string
+        requestBody:
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  documentFront: 
+                    type: string
+                  documentBack:
+                    type: string
+                  phaseName:
+                    type: string
+                    enum:
+                      - OCR
+                      - FACEMATCH
+                    default: OCR
+                  selfie:
+                    type: string
+                required:
+                  - documentFront
+                  - documentBack
+                  - phaseName
         responses:
           "200":
             description: Solicitação de análise recebida.
