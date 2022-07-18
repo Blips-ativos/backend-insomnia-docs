@@ -1,8 +1,8 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e34852bb21
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3e6d03272
-modified: 1657718761263
-created: 1657718761263
+modified: 1658147673460
+created: 1658147672435
 url: "{{ base_url }}/v2/technician"
 name: Criar técnico
 description: ""
@@ -11,6 +11,21 @@ body:
   mimeType: application/json
   text: |-
     {
+      "name": "string",
+      "email": "string",
+      "cellphone": "string",
+      "origin": "string",
+      "password": "string",
+      "address": {
+        "state": "string",
+        "city": "string",
+        "number": "string",
+        "zipCode": "string",
+        "stAve": "string",
+        "neighborhood": "string",
+        "complement": "string",
+        "proofOfResidence": "string"
+      },
       "technician_type": "string",
       "identifier_code": "string",
       "bank_data": "string",
@@ -24,11 +39,12 @@ parameters: []
 headers:
   - name: Content-Type
     value: application/json
+    id: pair_c11fffc147ad4f4987eafd1b5984d5e2
 authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1657718761263
+metaSortKey: -1658147672435
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

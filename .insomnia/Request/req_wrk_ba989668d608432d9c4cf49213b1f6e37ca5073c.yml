@@ -1,8 +1,8 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e37ca5073c
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3e6d03272
-modified: 1657837259449
-created: 1657407723422
+modified: 1658147672440
+created: 1658147672440
 url: "{{ base_url
   }}/v2/technician?current=1&pageSize=10&sortBy=createdAt&sortDirection=DESC"
 name: Lista de tecnicos da organização
@@ -13,25 +13,21 @@ parameters:
   - name: current
     disabled: true
     value: "1"
-    id: pair_1e6c983d6ff24421a63406040502b490
   - name: pageSize
     disabled: true
     value: "10"
-    id: pair_c51e3d82e5a547bda9d8ac14deb700f0
   - name: sortBy
     disabled: true
     value: createdAt
-    id: pair_9c2133bfbabd4b6795fdc10877095854
   - name: sortDirection
     disabled: true
     value: DESC
-    id: pair_0e64457ae08d4afd924ec9c5a70e934c
 headers: []
 authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1657407723422
+metaSortKey: -1658147672440
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
