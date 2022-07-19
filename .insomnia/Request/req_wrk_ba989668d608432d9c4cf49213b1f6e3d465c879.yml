@@ -1,8 +1,8 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e3d465c879
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3e6d03272
-modified: 1658147672438
-created: 1658147672438
+modified: 1658237509285
+created: 1658237509285
 url: "{{ base_url }}/v2/technician/{{ technicianId }}"
 name: Detalhamento de técnico da organização por id
 description: ""
@@ -14,7 +14,7 @@ authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1658147672438
+metaSortKey: -1658237509285
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
