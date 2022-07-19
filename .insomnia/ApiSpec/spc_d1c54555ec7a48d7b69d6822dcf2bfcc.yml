@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1657837754816
+modified: 1658237509714
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >
@@ -1582,6 +1582,17 @@ contents: >
             schema:
               $ref: "#/components/schemas/SegmentRB"
     schemas:
+      BankData:
+        type: object
+        properties:
+          bankAgency:
+            type: string
+          bankCode:
+            type: string
+          bankName:
+            type: string
+          bankAccount:
+            type: string
       TechnicianRB:
         type: object
         properties:
@@ -1593,14 +1604,14 @@ contents: >
             type: string
           origin:
             type: string
-          password:
-            type: string
+          address:
+            $ref: "#/components/schemas/Address"
           technician_type:
             type: string
           identifier_code:
             type: string
           bank_data:
-            type: string
+            $ref: "#/components/schemas/BankData"
           distance_range:
             type: integer
             default: 150
@@ -1629,9 +1640,11 @@ contents: >
           identifier_code:
             type: string
           bank_data:
-            type: string
+            $ref: "#/components/schemas/BankData"
           distance_range:
             type: integer
+          address:
+            $ref: "#/components/schemas/Address"
           disabled:
             type: boolean
             default: false
