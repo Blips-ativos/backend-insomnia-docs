@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1658237509714
+modified: 1658509156497
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >
@@ -1465,6 +1465,35 @@ contents: >
                   $ref: "#/components/schemas/Technician"
           "400":
             description: Invalid input
+      patch:
+        security:
+          - bearerAuth: []
+        tags:
+          - Technician
+        summary: Atualização de técnico da organização por id
+        description: "Atualização de técnico da organização por id"
+        parameters:
+          - name: technicianId
+            in: path
+            description: ID do técnico
+            required: true
+            schema:
+              type: string
+        requestBody:
+          $ref: "#/components/requestBodies/TechnicianRB"
+        responses:
+          "201":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    description:
+                      type: string
+                      default: Usuario editado com sucesso
+          "400":
+            description: Invalid input
     /v2/technician:
       post:
         security:
@@ -1475,6 +1504,54 @@ contents: >
         description: "Criar técnico"
         requestBody:
           $ref: "#/components/requestBodies/TechnicianRB"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Technician"
+          "400":
+            description: Invalid input
+    /v2/technician/{technicianId}/disable:
+      patch:
+        security:
+          - bearerAuth: []
+        tags:
+          - Technician
+        summary: desativação de técnico da organização por id
+        description: "desativação de técnico da organização por id"
+        parameters:
+          - name: technicianId
+            in: path
+            description: ID do técnico
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Technician"
+          "400":
+            description: Invalid input
+    /v2/technician/{technicianId}/enable:
+      patch:
+        security:
+          - bearerAuth: []
+        tags:
+          - Technician
+        summary: ativação de técnico da organização por id
+        description: "ativação de técnico da organização por id"
+        parameters:
+          - name: technicianId
+            in: path
+            description: ID do técnico
+            required: true
+            schema:
+              type: string
         responses:
           "200":
             description: successful operation
@@ -1582,6 +1659,23 @@ contents: >
             schema:
               $ref: "#/components/schemas/SegmentRB"
     schemas:
+      UserRefs:
+        type: object
+        properties:
+          ref:
+            type: string
+          name:
+            type: string
+          email:
+            type: string
+          status:
+            type: string
+            enum:
+              - INATIVO
+              - ATIVO
+              - EM_ANALISE
+          cellphone: 
+            type: string
       BankData:
         type: object
         properties:
@@ -1627,14 +1721,6 @@ contents: >
         properties:
           id:
             type: string
-          name:
-            type: string
-          email:
-            type: string
-          cellphone:
-            type: string
-          origin:
-            type: string
           technician_type:
             type: string
           identifier_code:
@@ -1645,11 +1731,11 @@ contents: >
             type: integer
           address:
             $ref: "#/components/schemas/Address"
-          disabled:
+          user_refs:
+            $ref: "#/components/schemas/UserRefs"
+          disable:
             type: boolean
             default: false
-          user_ref:
-            type: string
           phase:
             type: object
             properties:
@@ -1659,11 +1745,7 @@ contents: >
                 type: boolean
           typeof:
             type: string
-            enum:
-              - GESTOR
-              - EMPREENDEDOR
-              - TECNICO
-              - USUARIO_EMPRESA
+            default: TECNICO
           profiles:
             type: array
             items:
