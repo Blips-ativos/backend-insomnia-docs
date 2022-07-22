@@ -1,12 +1,12 @@
-_id: req_wrk_ba989668d608432d9c4cf49213b1f6e34852bb21
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3e261caac
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3e6d03272
-modified: 1658509157062
-created: 1658237509282
-url: "{{ base_url }}/v2/technician"
-name: Criar técnico
+modified: 1658509159228
+created: 1658509155604
+url: "{{ base_url }}/v2/technician/{{ technicianId }}"
+name: Atualização de técnico da organização por id
 description: ""
-method: POST
+method: PATCH
 body:
   mimeType: application/json
   text: |-
@@ -43,12 +43,12 @@ parameters: []
 headers:
   - name: Content-Type
     value: application/json
-    id: pair_d8c147338d114679969bccfaa5733ea7
+    id: pair_2c50c1673fff48afa542bd918ec9aadf
 authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1658237509282
+metaSortKey: -1658509155604
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

@@ -1,0 +1,24 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3f3488f76
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3e6d03272
+modified: 1658509155597
+created: 1658509155597
+url: "{{ base_url }}/v2/technician/{{ technicianId }}/disable"
+name: desativação de técnico da organização por id
+description: ""
+method: PATCH
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1658509155597
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
