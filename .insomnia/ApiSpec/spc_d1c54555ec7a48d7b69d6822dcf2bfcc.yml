@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1658509156497
+modified: 1659643702230
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >
@@ -35,6 +35,8 @@ contents: >
       description: Endpoints relacionados à modelos
     - name: Technician
       description: Endpoints relacionados à técnicos
+
+    
 
   paths:
     /v2/user/login/{orgId}:
@@ -1561,6 +1563,178 @@ contents: >
                   $ref: "#/components/schemas/Technician"
           "400":
             description: Invalid input
+    /v2/tickets:
+      post:
+        security:
+          - bearerAuth: []
+        tags:
+          - Ticket
+        summary: Criar chamado
+        description: "Criar chamado"
+        requestBody:
+          $ref: "#/components/requestBodies/TicketRB"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Ticket"
+          "400":
+            description: Invalid input
+    /v2/tickets?current=1&pageSize=10&sortBy=createdAt&sortDirection=DESC:
+      get:
+        security:
+          - bearerAuth: []
+        tags:
+          - Ticket
+        summary: Lista de chamados da organização
+        description: "Lista de chamados da organização"
+        parameters:
+          - name: current
+            in: query
+            description: página atual
+            schema:
+              type: integer
+              default: 1
+          - name: pageSize
+            in: query
+            description: tamanho da página
+            schema:
+              type: integer
+              default: 10
+          - name: sortBy
+            in: query
+            description: ordenar por
+            schema:
+              type: string
+              default: createdAt
+          - name: sortDirection
+            in: query
+            description: ordenação DESC / ASC
+            schema:
+              type: string
+              default: DESC
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    data:
+                      $ref: "#/components/schemas/Ticket"
+                    pagination:
+                      type: object
+                      properties:
+                        current:
+                          type: integer
+                        maxPage:
+                          type: integer
+                        pageSize:
+                          type: integer
+                        total:
+                          type: integer
+          "400":
+            description: Invalid input
+    /v2/tickets/{ticketId}:
+      get:
+        security:
+          - bearerAuth: []
+        tags:
+          - Ticket
+        summary: Detalhar chamado
+        description: "Detalhar chamado"
+        parameters:
+          - name: ticketId
+            in: path
+            description: ID do chamado
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Ticket"
+          "400":
+            description: Invalid input
+      patch:
+        security:
+          - bearerAuth: []
+        tags:
+          - Ticket
+        summary: Editar chamado
+        description: "Editar chamado"
+        parameters:
+          - name: ticketId
+            in: path
+            description: ID do chamado
+            required: true
+            schema:
+              type: string
+        requestBody:
+          $ref: "#/components/requestBodies/TicketRB"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Ticket"
+          "400":
+            description: Invalid input
+    /v2/tickets/{ticketId}/disable:
+      patch:
+        security:
+          - bearerAuth: []
+        tags:
+          - Ticket
+        summary: desativação de chamado da organização por id
+        description: "desativação de chamado da organização por id"
+        parameters:
+          - name: ticketId
+            in: path
+            description: ID do chamado
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Ticket"
+          "400":
+            description: Invalid input
+    /v2/tickets/{ticketId}/enable:
+      patch:
+        security:
+          - bearerAuth: []
+        tags:
+          - Ticket
+        summary: ativação de chamado da organização por id
+        description: "ativação de chamado da organização por id"
+        parameters:
+          - name: ticketId
+            in: path
+            description: ID do chamado
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Ticket"
+          "400":
+            description: Invalid input
   externalDocs:
     description: Find out more about Swagger
     url: http://swagger.io
@@ -1573,6 +1747,11 @@ contents: >
         scheme: bearer
         bearerFormat: JWT
     requestBodies:
+      TicketRB:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TicketRB"
       TechnicianRB:
         content:
           application/json:
@@ -1659,6 +1838,130 @@ contents: >
             schema:
               $ref: "#/components/schemas/SegmentRB"
     schemas:
+      TicketRB:
+        type: object
+        properties:
+          category:
+            type: string
+          title:
+            type: string
+          executor:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+          asset:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+          contract_id:
+            type: string
+          description:
+            type: string
+          priority:
+            type: string
+          status:
+            type: string
+          images:
+            type: array
+            items:
+              type: string
+          concluded_date:
+            type: string
+          finish_date:
+            type: string
+          start_date:
+            type: string
+          scheduling_date:
+            type: string
+          rating:
+            type: integer
+          rating_comment:
+            type: string
+          justification:
+            type: string
+          technician_code:
+            type: string
+      Ticket:
+        type: object
+        properties:
+          code:
+            type: string
+          organization_ref:
+            type: string
+          requested_by:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              cellphone:
+                type: string
+              identifier_code:
+                type: string
+          category:
+            type: string
+          title:
+            type: string
+          executor:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+          asset:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+          contract_id:
+            type: string
+          description:
+            type: string
+          priority:
+            type: string
+          status:
+            type: string
+          historical:
+            type: array
+            items:
+              $ref: "#/components/schemas/HistoricalItem"
+          images:
+            type: array
+            items:
+              type: string
+          concluded_date:
+            type: string
+          finish_date:
+            type: string
+          start_date:
+            type: string
+          scheduling_date:
+            type: string
+          rating:
+            type: integer
+          rating_comment:
+            type: string
+          justification:
+            type: string
+          technician_code:
+            type: string
+          disabled:
+            type: boolean
+            default: false
+          created_at:
+            type: string
+          updated_at:
+            type: string
       UserRefs:
         type: object
         properties:
