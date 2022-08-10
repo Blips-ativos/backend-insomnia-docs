@@ -1,0 +1,24 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e39236b7ee
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3a7677e84
+modified: 1660167763585
+created: 1660167763585
+url: "{{ base_url }}/v2/tickets/{{ ticketId }}/enable"
+name: ativação de chamado da organização por id
+description: ""
+method: PATCH
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1660167763585
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

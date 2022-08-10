@@ -1,0 +1,37 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e38bf4d4b4
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e320e33862
+modified: 1660167763579
+created: 1660167763579
+url: "{{ base_url
+  }}/v2/assets?current=1&pageSize=10&sortBy=createdAt&sortDirection=DESC"
+name: Lista de ativos da organização
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: current
+    disabled: true
+    value: "1"
+  - name: pageSize
+    disabled: true
+    value: "10"
+  - name: sortBy
+    disabled: true
+    value: createdAt
+  - name: sortDirection
+    disabled: true
+    value: DESC
+headers: []
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1660167763579
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,45 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e34a5869a0
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e320e33862
+modified: 1660167763576
+created: 1660167763576
+url: "{{ base_url }}/v2/assets"
+name: Criar ativo
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "string",
+      "model": {
+        "id": "string",
+        "name": "string",
+        "segment": "string"
+      },
+      "serie_number": "string",
+      "blocked_id": "string",
+      "connetected_id": "string",
+      "last_connection_date": "string",
+      "current_contract": {},
+      "value": 0,
+      "images": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1660167763576
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
