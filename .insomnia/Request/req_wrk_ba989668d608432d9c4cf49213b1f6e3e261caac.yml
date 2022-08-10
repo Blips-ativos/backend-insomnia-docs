@@ -1,7 +1,7 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e3e261caac
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3e6d03272
-modified: 1659643320830
+modified: 1660167766266
 created: 1658509155604
 url: "{{ base_url }}/v2/technician/{{ technicianId }}"
 name: Atualização de técnico da organização por id

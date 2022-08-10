@@ -1,0 +1,55 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3875c1e0b
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3a7677e84
+modified: 1660167763600
+created: 1660167763600
+url: "{{ base_url }}/v2/tickets"
+name: Criar chamado
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "category": "string",
+      "title": "string",
+      "executor": {
+        "id": "string",
+        "name": "string"
+      },
+      "asset": {
+        "id": "string",
+        "name": "string"
+      },
+      "contract_id": "string",
+      "description": "string",
+      "priority": "string",
+      "status": "string",
+      "images": [
+        "string"
+      ],
+      "concluded_date": "string",
+      "finish_date": "string",
+      "start_date": "string",
+      "scheduling_date": "string",
+      "rating": 0,
+      "rating_comment": "string",
+      "justification": "string",
+      "technician_code": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1660167763600
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

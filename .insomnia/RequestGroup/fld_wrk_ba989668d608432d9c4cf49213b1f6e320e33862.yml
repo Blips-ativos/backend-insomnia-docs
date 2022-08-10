@@ -1,0 +1,10 @@
+_id: fld_wrk_ba989668d608432d9c4cf49213b1f6e320e33862
+type: RequestGroup
+parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
+modified: 1660167764971
+created: 1660167764971
+name: Assets
+description: Endpoints relacionados aos ativos
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1660167764971

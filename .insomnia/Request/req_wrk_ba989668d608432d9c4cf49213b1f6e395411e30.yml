@@ -1,0 +1,24 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e395411e30
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3a7677e84
+modified: 1660167763594
+created: 1660167763594
+url: "{{ base_url }}/v2/tickets/{{ ticketId }}"
+name: Detalhar chamado
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1660167763594
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1659643702230
+modified: 1660167765644
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >
@@ -35,6 +35,10 @@ contents: >
       description: Endpoints relacionados à modelos
     - name: Technician
       description: Endpoints relacionados à técnicos
+    - name: Ticket
+      description: Endpoints relacionados à chamados
+    - name: Assets
+      description: Endpoints relacionados aos ativos
 
     
 
@@ -1735,6 +1739,154 @@ contents: >
                   $ref: "#/components/schemas/Ticket"
           "400":
             description: Invalid input
+    /v2/assets?current=1&pageSize=10&sortBy=createdAt&sortDirection=DESC:
+      get: 
+        security:
+          - bearerAuth: []
+        tags:
+          - Assets
+        summary: Lista de ativos da organização
+        description: "Lista de ativos da organização"
+        parameters:
+          - name: current
+            in: query
+            description: página atual
+            schema:
+              type: integer
+              default: 1
+          - name: pageSize
+            in: query
+            description: tamanho da página
+            schema:
+              type: integer
+              default: 10
+          - name: sortBy
+            in: query
+            description: ordenar por
+            schema:
+              type: string
+              default: createdAt
+          - name: sortDirection
+            in: query
+            description: ordenação DESC / ASC
+            schema:
+              type: string
+              default: DESC
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    data:
+                      $ref: "#/components/schemas/Asset"
+                    pagination:
+                      type: object
+                      properties:
+                        current:
+                          type: integer
+                        maxPage:
+                          type: integer
+                        pageSize:
+                          type: integer
+                        total:
+                          type: integer
+          "400":
+            description: Invalid input
+    /v2/assets:
+      post:
+        security:
+          - bearerAuth: []
+        tags:
+          - Assets
+        summary: Criar ativo
+        description: "Criar ativo"
+        requestBody:
+          $ref: "#/components/requestBodies/AssetRB"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Asset"
+          "400":
+            description: Invalid input
+    /v2/assets/{assetId}:
+      get:
+        security:
+          - bearerAuth: []
+        tags:
+          - Assets
+        summary: Detalhar ativo
+        description: "Detalhar ativo"
+        parameters:
+          - name: assetId
+            in: path
+            description: ID do ativo
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Asset"
+          "400":
+            description: Invalid input
+      put:
+        security:
+          - bearerAuth: []
+        tags:
+          - Assets
+        summary: Editar ativo
+        description: "Editar ativo"
+        parameters:
+          - name: assetId
+            in: path
+            description: ID do ativo
+            required: true
+            schema:
+              type: string
+        requestBody:
+          $ref: "#/components/requestBodies/AssetRB"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Asset"
+          "400":
+            description: Invalid input
+      delete:
+        security:
+          - bearerAuth: []
+        tags:
+          - Assets
+        summary: Desativar ativo
+        description: "Desativar ativo"
+        parameters:
+          - name: assetId
+            in: path
+            description: ID do ativo
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Asset"
+          "400":
+            description: Invalid input
+
   externalDocs:
     description: Find out more about Swagger
     url: http://swagger.io
@@ -1747,6 +1899,11 @@ contents: >
         scheme: bearer
         bearerFormat: JWT
     requestBodies:
+      AssetRB:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AssetRB"
       TicketRB:
         content:
           application/json:
@@ -1838,6 +1995,81 @@ contents: >
             schema:
               $ref: "#/components/schemas/SegmentRB"
     schemas:
+      AssetRB:
+        type: object
+        properties:
+          name:
+            type: string
+          model:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              segment:
+                type: string
+          serie_number:
+            type: string
+          blocked_id:
+            type: string
+          connetected_id:
+            type: string
+          last_connection_date:
+            type: string
+          current_contract:
+            type: object
+          value:
+            type: number
+          images:
+            type: array
+            items:
+              type: string
+      Asset:
+        type: object
+        properties:
+          id: 
+            type: string
+          organization_ref:
+            type: string
+          name:
+            type: string
+          model:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              segment:
+                type: string
+          serie_number:
+            type: string
+          blocked_id:
+            type: string
+          connetected_id:
+            type: string
+          last_connection_date:
+            type: string
+          historical_status:
+            type: array
+            items:
+              $ref: "#/components/schemas/HistoricalItem"
+          current_contract:
+            type: object
+          disabled:
+            type: boolean
+            default: false
+          value:
+            type: number
+          images:
+            type: array
+            items:
+              type: string
+          created_at:
+            type: string
+          updated_at:
+            type: string
       TicketRB:
         type: object
         properties:
