@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1660167765644
+modified: 1660598368058
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >
@@ -1886,7 +1886,66 @@ contents: >
                   $ref: "#/components/schemas/Asset"
           "400":
             description: Invalid input
-
+    /v2/negotiation/{negotiationOrClientId}/questions/{questionId}/approve:
+      post:
+        security:
+          - bearerAuth: []
+        tags:
+          - Negotiation
+        summary: Aprovar pergunta
+        description: "Aprovar pergunta"
+        parameters:
+          - name: negotiationOrClientId
+            in: path
+            description: ID da negociação
+            required: true
+            schema:
+              type: string
+          - name: questionId
+            in: path
+            description: ID da pergunta
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Negotiation"
+          "400":
+            description: Invalid input
+    /v2/negotiation/{negotiationOrClientId}/questions/{questionId}/reprove:
+      post:
+        security:
+          - bearerAuth: []
+        tags:
+          - Negotiation
+        summary: Reprovar pergunta
+        description: "Reprovar pergunta"
+        parameters:
+          - name: negotiationOrClientId
+            in: path
+            description: ID da negociação
+            required: true
+            schema:
+              type: string
+          - name: questionId
+            in: path
+            description: ID da pergunta
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Negotiation"
+          "400":
+            description: Invalid input
   externalDocs:
     description: Find out more about Swagger
     url: http://swagger.io

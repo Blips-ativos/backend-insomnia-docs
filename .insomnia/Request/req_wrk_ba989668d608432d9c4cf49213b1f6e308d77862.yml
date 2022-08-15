@@ -1,0 +1,25 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e308d77862
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3368cbdd7
+modified: 1660598364800
+created: 1660598364800
+url: "{{ base_url }}/v2/negotiation/{{ negotiationOrClientId }}/questions/{{
+  questionId }}/approve"
+name: Aprovar pergunta
+description: ""
+method: POST
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1660598364800
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
