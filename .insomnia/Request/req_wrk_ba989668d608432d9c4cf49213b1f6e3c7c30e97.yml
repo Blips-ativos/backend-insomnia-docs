@@ -1,0 +1,32 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3c7c30e97
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3a7677e84
+modified: 1660666651523
+created: 1660666651523
+url: "{{ base_url }}/v2/tickets/{{ ticketId }}/change-status"
+name: alteração de status de chamado
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "status": "string",
+      "schedulingDate": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1660666651523
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

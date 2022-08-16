@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1660598368058
+modified: 1660666654755
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >
@@ -1946,6 +1946,47 @@ contents: >
                   $ref: "#/components/schemas/Negotiation"
           "400":
             description: Invalid input
+    /v2/tickets/{ticketId}/change-status:
+      post:
+        security:
+          - bearerAuth: []
+        tags:
+          - Ticket
+        summary: alteração de status de chamado
+        description: "alteração de status de chamado"
+        parameters:
+          - name: ticketId
+            in: path
+            description: ID do chamado
+            required: true
+            schema:
+              type: string
+        requestBody:
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: 
+                    type: string
+                    enum:
+                      - NEXT
+                      - FINISHED
+                      - NOT_SOLVED
+                      - CANCELLED
+                  schedulingDate:
+                    type: string
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Ticket"
+          "400":
+            description: Invalid input
+
+
   externalDocs:
     description: Find out more about Swagger
     url: http://swagger.io
