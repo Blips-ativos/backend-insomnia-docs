@@ -1,0 +1,34 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3b66879b4
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3a7677e84
+modified: 1660746324334
+created: 1660746295474
+url: "{{ base_url }}/v2/tickets/{{ ticketId }}/historical-item/{{ historicalId }}"
+name: Adiciona item no historico de chamado
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "type": "string",
+      "description": "string",
+      "justification": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_a0d126338f454c0d91dfa1eac431a66e
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1660746295474
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
