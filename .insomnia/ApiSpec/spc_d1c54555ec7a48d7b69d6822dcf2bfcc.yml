@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1660746300960
+modified: 1660746779566
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >
@@ -1986,7 +1986,7 @@ contents: >
           "400":
             description: Invalid input
     /v2/tickets/{ticketId}/historical-item:
-      patch:
+      post:
         security:
           - bearerAuth: []
         tags:
