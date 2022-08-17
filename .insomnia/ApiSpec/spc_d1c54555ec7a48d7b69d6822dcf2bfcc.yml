@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1660746779566
+modified: 1660747384738
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >
@@ -2017,8 +2017,8 @@ contents: >
           - bearerAuth: []
         tags:
           - Ticket
-        summary: Adiciona item no historico de chamado
-        description: "Adiciona item no historico de chamado"
+        summary: Atualiza item no historico de chamado
+        description: "Atualiza item no historico de chamado"
         parameters:
           - name: ticketId
             in: path

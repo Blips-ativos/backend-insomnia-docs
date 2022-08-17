@@ -1,7 +1,7 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e34d4d989e
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3a7677e84
-modified: 1660746783785
+modified: 1660747366459
 created: 1660746775464
 url: "{{ base_url }}/v2/tickets/{{ ticketId }}/historical-item"
 name: Adiciona item no historico de chamado
