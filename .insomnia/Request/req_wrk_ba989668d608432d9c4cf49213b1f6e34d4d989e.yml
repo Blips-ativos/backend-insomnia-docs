@@ -1,29 +1,30 @@
-_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3c7c30e97
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e34d4d989e
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3a7677e84
-modified: 1660747365026
-created: 1660666651523
-url: "{{ base_url }}/v2/tickets/{{ ticketId }}/change-status"
-name: alteração de status de chamado
+modified: 1660747366459
+created: 1660746775464
+url: "{{ base_url }}/v2/tickets/{{ ticketId }}/historical-item"
+name: Adiciona item no historico de chamado
 description: ""
 method: POST
 body:
   mimeType: application/json
   text: |-
     {
-      "status": "string",
-      "schedulingDate": "string"
+      "type": "string",
+      "description": "string",
+      "justification": "string"
     }
 parameters: []
 headers:
   - name: Content-Type
     value: application/json
-    id: pair_0818b8c50f20415bbdc10161a017c9d2
+    id: pair_3817a400c38246a9b7a064555d8992e0
 authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1660666651523
+metaSortKey: -1660746775464
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
