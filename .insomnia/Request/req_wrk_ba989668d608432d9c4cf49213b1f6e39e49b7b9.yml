@@ -1,0 +1,24 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e39e49b7b9
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3f12ee6d3
+modified: 1665682730576
+created: 1665682730576
+url: "{{ base_url }}/v2/leads/{{ leadId }}"
+name: Detalhar lead
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1665682730576
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
