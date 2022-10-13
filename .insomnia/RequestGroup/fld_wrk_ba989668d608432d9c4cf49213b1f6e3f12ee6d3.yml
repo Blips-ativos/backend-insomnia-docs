@@ -1,0 +1,10 @@
+_id: fld_wrk_ba989668d608432d9c4cf49213b1f6e3f12ee6d3
+type: RequestGroup
+parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
+modified: 1665682731313
+created: 1665682731313
+name: Leads
+description: Endpoints relacionados aos leads
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1665682731313

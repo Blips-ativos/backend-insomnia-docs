@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1660747384738
+modified: 1665682737486
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >
@@ -39,6 +39,9 @@ contents: >
       description: Endpoints relacionados à chamados
     - name: Assets
       description: Endpoints relacionados aos ativos
+    - name: Leads
+      description: Endpoints relacionados aos leads
+
 
     
 
@@ -1433,7 +1436,9 @@ contents: >
                   type: object
                   properties:
                     data:
-                      $ref: "#/components/schemas/Technician"
+                      type: array
+                      items:
+                        $ref: "#/components/schemas/Technician"
                     pagination:
                       type: object
                       properties:
@@ -1628,7 +1633,9 @@ contents: >
                   type: object
                   properties:
                     data:
-                      $ref: "#/components/schemas/Ticket"
+                      type: array
+                      items:
+                        $ref: "#/components/schemas/Ticket"
                     pagination:
                       type: object
                       properties:
@@ -1781,7 +1788,9 @@ contents: >
                   type: object
                   properties:
                     data:
-                      $ref: "#/components/schemas/Asset"
+                      type: array
+                      items:
+                        $ref: "#/components/schemas/Asset"
                     pagination:
                       type: object
                       properties:
@@ -2043,6 +2052,132 @@ contents: >
                   $ref: "#/components/schemas/Ticket"
           "400":
             description: Invalid input
+    /v2/leads?current=1&pageSize=10&sortBy=createdAt&sortDirection=DESC:
+      get: 
+        security:
+          - bearerAuth: []
+        tags:
+          - Leads
+        summary: Lista de leads da organização
+        description: "Lista de leads da organização"
+        parameters:
+          - name: current
+            in: query
+            description: página atual
+            schema:
+              type: integer
+              default: 1
+          - name: pageSize
+            in: query
+            description: tamanho da página
+            schema:
+              type: integer
+              default: 10
+          - name: sortBy
+            in: query
+            description: ordenar por
+            schema:
+              type: string
+              default: createdAt
+          - name: sortDirection
+            in: query
+            description: ordenação DESC / ASC
+            schema:
+              type: string
+              default: DESC
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    data:
+                      type: array
+                      items:
+                        $ref: "#/components/schemas/Lead"
+                    pagination:
+                      type: object
+                      properties:
+                        current:
+                          type: integer
+                        maxPage:
+                          type: integer
+                        pageSize:
+                          type: integer
+                        total:
+                          type: integer
+          "400":
+            description: Invalid input
+    /v2/leads:
+      post:
+        security:
+          - bearerAuth: []
+        tags:
+          - Leads
+        summary: Criar lead
+        description: "Criar lead"
+        requestBody:
+          $ref: "#/components/requestBodies/LeadRB"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Lead"
+          "400":
+            description: Invalid input
+    /v2/leads/{leadId}:
+      get:
+        security:
+          - bearerAuth: []
+        tags:
+          - Leads
+        summary: Detalhar lead
+        description: "Detalhar lead"
+        parameters:
+          - name: leadId
+            in: path
+            description: ID do lead
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Lead"
+          "400":
+            description: Invalid input
+      put:
+        security:
+          - bearerAuth: []
+        tags:
+          - Leads
+        summary: Editar lead
+        description: "Editar lead"
+        parameters:
+          - name: leadId
+            in: path
+            description: ID do lead
+            required: true
+            schema:
+              type: string
+        requestBody:
+          $ref: "#/components/requestBodies/LeadRB"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Lead"
+          "400":
+            description: Invalid input
 
   externalDocs:
     description: Find out more about Swagger
@@ -2056,6 +2191,11 @@ contents: >
         scheme: bearer
         bearerFormat: JWT
     requestBodies:
+      LeadRB:
+        content:      
+          application/json:
+            schema:
+                $ref: "#/components/schemas/LeadRB"
       AssetRB:
         content:
           application/json:
@@ -2152,6 +2292,108 @@ contents: >
             schema:
               $ref: "#/components/schemas/SegmentRB"
     schemas:
+      LeadRB:
+        type: object
+        properties:
+          name:
+            type: string
+          last_name:
+            type: string
+          machine_type:
+            type: string
+          commercial_conditions:
+            type: string
+          company_name:
+            type: string
+          document:
+            type: string
+          monthly_earnings:
+            type: string
+          number_of_employee:
+            type: string
+          cellphone:
+            type: string
+          email:
+            type: string
+          origin:
+            type: string
+          coupon:
+            type: string
+          utm_campaign:
+            type: string
+          utm_source:
+            type: string
+          utm_medium:
+            type: string
+          utm_content:
+            type: string
+          utm_term:
+            type: string
+          gclid:
+            type: string
+          form:
+            type: string
+          link_font:
+            type: string
+          referrer:
+            type: string
+          negotiation_id:
+            type: string
+          id_crm:
+            type: string
+      Lead:
+        type: object
+        properties:
+          id:
+            type: string
+          name:
+            type: string
+          last_name:
+            type: string
+          machine_type:
+            type: string
+          commercial_conditions:
+            type: string
+          company_name:
+            type: string
+          document:
+            type: string
+          monthly_earnings:
+            type: string
+          number_of_employee:
+            type: string
+          cellphone:
+            type: string
+          email:
+            type: string
+          origin:
+            type: string
+          coupon:
+            type: string
+          utm_campaign:
+            type: string
+          utm_source:
+            type: string
+          utm_medium:
+            type: string
+          utm_content:
+            type: string
+          utm_term:
+            type: string
+          gclid:
+            type: string
+          form:
+            type: string
+          link_font:
+            type: string
+          referrer:
+            type: string
+          negotiation_id:
+            type: string
+          id_crm:
+            type: string
+          created_at:
+            type: string
       AssetRB:
         type: object
         properties:

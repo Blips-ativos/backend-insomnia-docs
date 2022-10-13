@@ -1,0 +1,53 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3340343a6
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3f12ee6d3
+modified: 1665682730578
+created: 1665682730578
+url: "{{ base_url }}/v2/leads"
+name: Criar lead
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "string",
+      "last_name": "string",
+      "machine_type": "string",
+      "commercial_conditions": "string",
+      "company_name": "string",
+      "document": "string",
+      "monthly_earnings": "string",
+      "number_of_employee": "string",
+      "cellphone": "string",
+      "email": "string",
+      "origin": "string",
+      "coupon": "string",
+      "utm_campaign": "string",
+      "utm_source": "string",
+      "utm_medium": "string",
+      "utm_content": "string",
+      "utm_term": "string",
+      "gclid": "string",
+      "form": "string",
+      "link_font": "string",
+      "referrer": "string",
+      "negotiation_id": "string",
+      "id_crm": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1665682730578
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
