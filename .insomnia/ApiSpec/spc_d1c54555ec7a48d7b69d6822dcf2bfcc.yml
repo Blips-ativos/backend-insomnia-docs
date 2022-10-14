@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1665682737486
+modified: 1665757293227
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >
@@ -2336,10 +2336,6 @@ contents: >
           link_font:
             type: string
           referrer:
-            type: string
-          negotiation_id:
-            type: string
-          id_crm:
             type: string
       Lead:
         type: object

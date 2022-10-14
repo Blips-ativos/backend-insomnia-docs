@@ -1,7 +1,7 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e3340343a6
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3f12ee6d3
-modified: 1665682730578
+modified: 1665757300177
 created: 1665682730578
 url: "{{ base_url }}/v2/leads"
 name: Criar lead
@@ -31,9 +31,7 @@ body:
       "gclid": "string",
       "form": "string",
       "link_font": "string",
-      "referrer": "string",
-      "negotiation_id": "string",
-      "id_crm": "string"
+      "referrer": "string"
     }
 parameters: []
 headers:
