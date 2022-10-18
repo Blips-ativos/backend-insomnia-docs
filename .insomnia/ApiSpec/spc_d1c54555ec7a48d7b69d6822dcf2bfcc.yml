@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1665757293227
+modified: 1666099167273
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >
@@ -2052,7 +2052,7 @@ contents: >
                   $ref: "#/components/schemas/Ticket"
           "400":
             description: Invalid input
-    /v2/leads?current=1&pageSize=10&sortBy=createdAt&sortDirection=DESC:
+    /v2/leads?current=1&pageSize=10&sortBy=createdAt&sortDirection=DESC&searchTerm=document:
       get: 
         security:
           - bearerAuth: []
@@ -2085,6 +2085,11 @@ contents: >
             schema:
               type: string
               default: DESC
+          - name: searchTerm
+            in: query
+            description: filtro de busca
+            schema:
+              type: string
         responses:
           "200":
             description: successful operation
@@ -2301,7 +2306,11 @@ contents: >
             type: string
           machine_type:
             type: string
+          machine_id:
+            type: string
           commercial_conditions:
+            type: string
+          commercial_conditions_id:
             type: string
           company_name:
             type: string
@@ -2348,7 +2357,11 @@ contents: >
             type: string
           machine_type:
             type: string
+          machine_id:
+            type: string
           commercial_conditions:
+            type: string
+          commercial_conditions_id:
             type: string
           company_name:
             type: string
@@ -2389,6 +2402,8 @@ contents: >
           id_crm:
             type: string
           created_at:
+            type: string
+          organization_ref:
             type: string
       AssetRB:
         type: object
