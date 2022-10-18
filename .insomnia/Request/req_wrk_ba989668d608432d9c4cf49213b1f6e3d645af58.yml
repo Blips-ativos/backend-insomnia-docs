@@ -1,0 +1,39 @@
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3d645af58
+type: Request
+parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3ee1acfa5
+modified: 1666125101264
+created: 1666125101072
+url: "{{ base_url }}/v2/user/register/{{ orgId }}/without-checking"
+name: registrar usuário sem checagem de sms e email
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "string",
+      "email": "string",
+      "profiles": [
+        "string"
+      ],
+      "status": "string",
+      "typeof": "string",
+      "cellphone": "string",
+      "origin": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1666125101072
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1666118125624
+modified: 1666125101287
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >
@@ -84,6 +84,27 @@ contents: >
         responses:
           "400":
             description: Invalid input
+    /v2/user/register/{orgId}/without-checking:
+      post:
+        security:
+          - bearerAuth: []
+        tags:
+          - Authentication
+        summary: registrar usuário sem checagem de sms e email
+        description: "Registrar usuário sem checagem de sms e email"
+        parameters:
+          - name: orgId
+            in: path
+            description: ID da organização
+            required: true
+            schema:
+              type: string
+        requestBody:
+          $ref: "#/components/requestBodies/RegisterWithoutCheck"
+        responses:
+          "400":
+            description: Invalid input
+    
     /v2/user/refresh-token:
       post:
         security:
@@ -2279,6 +2300,11 @@ contents: >
           application/json:
             schema:
               $ref: "#/components/schemas/Login"
+      RegisterWithoutCheck:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RegisterWithoutCheck"
       Register:
         content:
           application/json:
@@ -3097,6 +3123,34 @@ contents: >
           email:
             type: string
           password:
+            type: string
+      RegisterWithoutCheck:
+        type: object
+        properties:
+          name:
+            type: string
+          email:
+            type: string
+          profiles:
+            type: array
+            items: 
+              type: string
+          status:
+            type: string
+            enum:
+              - INATIVO
+              - ATIVO
+              - EM_ANALISE
+          typeof:
+            type: string
+            enum:
+              - GESTOR
+              - EMPREENDEDOR
+              - TECNICO
+              - USUARIO_EMPRESA
+          cellphone:
+            type: string
+          origin:
             type: string
       Register:
         type: object
