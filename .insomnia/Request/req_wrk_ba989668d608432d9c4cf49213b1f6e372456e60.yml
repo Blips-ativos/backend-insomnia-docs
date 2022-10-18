@@ -1,8 +1,8 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e372456e60
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3f12ee6d3
-modified: 1665682730572
-created: 1665682730572
+modified: 1666099031240
+created: 1666099023208
 url: "{{ base_url }}/v2/leads/{{ leadId }}"
 name: Editar lead
 description: ""
@@ -14,7 +14,9 @@ body:
       "name": "string",
       "last_name": "string",
       "machine_type": "string",
+      "machine_id": "string",
       "commercial_conditions": "string",
+      "commercial_conditions_id": "string",
       "company_name": "string",
       "document": "string",
       "monthly_earnings": "string",
@@ -31,9 +33,7 @@ body:
       "gclid": "string",
       "form": "string",
       "link_font": "string",
-      "referrer": "string",
-      "negotiation_id": "string",
-      "id_crm": "string"
+      "referrer": "string"
     }
 parameters: []
 headers:
@@ -43,7 +43,7 @@ authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1665682730572
+metaSortKey: -1666099023208
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

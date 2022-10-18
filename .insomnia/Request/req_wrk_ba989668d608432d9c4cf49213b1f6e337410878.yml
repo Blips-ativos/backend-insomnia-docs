@@ -1,10 +1,11 @@
-_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3c54fa941
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e337410878
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3f12ee6d3
-modified: 1665682730580
-created: 1665682730580
+modified: 1666099166238
+created: 1666099166238
 url: "{{ base_url
-  }}/v2/leads?current=1&pageSize=10&sortBy=createdAt&sortDirection=DESC"
+  }}/v2/leads?current=1&pageSize=10&sortBy=createdAt&sortDirection=DESC&searchT\
+  erm=document"
 name: Lista de leads da organização
 description: ""
 method: GET
@@ -22,12 +23,15 @@ parameters:
   - name: sortDirection
     disabled: true
     value: DESC
+  - name: searchTerm
+    disabled: true
+    value: string
 headers: []
 authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1665682730580
+metaSortKey: -1666099166238
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
