@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1666099167273
+modified: 1666118125624
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >
@@ -2174,6 +2174,29 @@ contents: >
               type: string
         requestBody:
           $ref: "#/components/requestBodies/LeadRB"
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Lead"
+          "400":
+            description: Invalid input
+      delete:
+        security:
+          - bearerAuth: []
+        tags:
+          - Leads
+        summary: Excluir lead
+        description: "Excluir lead"
+        parameters:
+          - name: leadId
+            in: path
+            description: ID do lead
+            required: true
+            schema:
+              type: string
         responses:
           "200":
             description: successful operation
