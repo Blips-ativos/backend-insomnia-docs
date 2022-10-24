@@ -1,10 +1,10 @@
-_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3c8589cb3
+_id: req_wrk_ba989668d608432d9c4cf49213b1f6e3d645af58
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3ee1acfa5
-modified: 1666183568946
-created: 1656092692693
-url: "{{ base_url }}/v2/user/register/{{ orgId }}"
-name: registrar usuário
+modified: 1666620064576
+created: 1666125101072
+url: "{{ base_url }}/v2/user/register/{{ orgId }}/without-checking"
+name: registrar usuário sem checagem de sms e email
 description: ""
 method: POST
 body:
@@ -13,7 +13,6 @@ body:
     {
       "name": "string",
       "email": "string",
-      "password": "string",
       "profiles": [
         "string"
       ],
@@ -30,7 +29,7 @@ authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1656092692693
+metaSortKey: -1666125101072
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
