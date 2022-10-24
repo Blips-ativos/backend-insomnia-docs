@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1666125101287
+modified: 1666620080420
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >
@@ -2395,6 +2395,8 @@ contents: >
             type: string
           referrer:
             type: string
+          client_id:
+            type: string
       Lead:
         type: object
         properties:
@@ -2454,6 +2456,17 @@ contents: >
             type: string
           organization_ref:
             type: string
+          client_id:
+            type: string
+          machine_quantity:
+            type: string
+          created_by:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
       AssetRB:
         type: object
         properties:
