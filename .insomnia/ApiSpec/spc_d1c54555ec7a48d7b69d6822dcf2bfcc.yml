@@ -1,7 +1,7 @@
 _id: spc_d1c54555ec7a48d7b69d6822dcf2bfcc
 type: ApiSpec
 parentId: wrk_ba989668d608432d9c4cf49213b1f6e3
-modified: 1666620080420
+modified: 1667244629131
 created: 1650311385059
 fileName: BLIPS DOCS
 contents: >
@@ -2365,6 +2365,8 @@ contents: >
             type: string
           document:
             type: string
+          address:
+            type: string
           monthly_earnings:
             type: string
           number_of_employee:
@@ -2417,6 +2419,8 @@ contents: >
           company_name:
             type: string
           document:
+            type: string
+          address:
             type: string
           monthly_earnings:
             type: string
