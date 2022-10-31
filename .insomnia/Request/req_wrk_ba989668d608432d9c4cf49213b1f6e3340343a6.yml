@@ -1,8 +1,8 @@
 _id: req_wrk_ba989668d608432d9c4cf49213b1f6e3340343a6
 type: Request
 parentId: fld_wrk_ba989668d608432d9c4cf49213b1f6e3f12ee6d3
-modified: 1666620079872
-created: 1666620079596
+modified: 1667244628720
+created: 1667244628435
 url: "{{ base_url }}/v2/leads"
 name: Criar lead
 description: ""
@@ -19,6 +19,7 @@ body:
       "commercial_conditions_id": "string",
       "company_name": "string",
       "document": "string",
+      "address": "string",
       "monthly_earnings": "string",
       "number_of_employee": "string",
       "cellphone": "string",
@@ -44,7 +45,7 @@ authentication:
   type: bearer
   token: "{{bearerToken}}"
   prefix: ""
-metaSortKey: -1666620079596
+metaSortKey: -1667244628435
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
